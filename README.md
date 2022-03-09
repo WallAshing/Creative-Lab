@@ -1,0 +1,17 @@
+# RUN THOSE COMMANDS #
+***
+`
+COMPOSER INSTALL
+`
+***
+`
+YARN
+`
+***
+`
+YARN ENCORE DEV --WATCH
+`
+***
+`
+SYMFONY SERVER:START
+`
