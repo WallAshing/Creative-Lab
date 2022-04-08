@@ -1,0 +1,29 @@
+// **** ABSTRACTS **** //
+// =================== //
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+@import "./abstracts/placeholders";
+@import "./abstracts/functions";
+
+// **** BASE **** //
+// ============== //
+@import "./base/reset";
+@import "./base/typography";
+
+// **** COMPONENTS **** //
+// ==================== //
+@import "./components/buttons";
+
+// **** PAGES **** //
+// =============== //
+@import "./pages/blog";
+
+// **** SECTIONS **** //
+// ================== //
+@import "./sections/header";
+@import "./sections/hero";
+@import "./sections/nav";
+@import "./sections/footer";
+
+
+// sass --watch public/style/scss/main.scss:public/style/css/main.csssass --watch public/style/scss/main.scss:public/style/css/main.css

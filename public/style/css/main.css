@@ -1,0 +1,205 @@
+h3, h2, h1 {
+  font-family: "Neuzeit Grotesk", sans-serif;
+  font-weight: 900;
+}
+
+button, .subtitle, h4 {
+  font-family: "Neuzeit Grotesk", sans-serif;
+  font-weight: 700;
+}
+
+a, .link {
+  font-family: "Neuzeit Grotesk", sans-serif;
+  font-weight: 400;
+}
+
+.legend, .text {
+  font-family: "Neuzeit Grotesk", sans-serif;
+  font-weight: 200;
+}
+
+@keyframes function {}
+*, *::after, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+  background: #F0F4F0;
+}
+
+.margin-body {
+  max-width: 1900px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+h1 {
+  font-size: 6.4em;
+  color: #0B0F0C;
+}
+
+h2 {
+  font-size: 6.4em;
+  color: #0B0F0C;
+}
+
+h3 {
+  font-size: 4.6em;
+  color: #484849;
+}
+
+h4 {
+  font-size: 2.8em;
+  color: #0B0F0C;
+}
+
+.text {
+  font-size: 2.2em;
+  color: #0B0F0C;
+}
+
+.legend {
+  font-size: 2.2em;
+  color: #484849;
+}
+
+.subtitle {
+  font-size: 2.8em;
+}
+
+a, .link {
+  font-size: 2em;
+  text-decoration: none;
+  color: #0B0F0C;
+  cursor: pointer;
+}
+a:hover, .link:hover {
+  font-weight: 700;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  background: linear-gradient(90deg, #288E93, #60CF82);
+  padding: 13px 20px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 999px;
+}
+button:hover {
+  background: linear-gradient(90deg, #60CF82, #288E93);
+}
+
+.sections-blog {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.container-description {
+  background: #fff;
+  width: 100vw;
+  padding: 170px 0 250px 0;
+}
+
+.container-articles-tutos {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: -80px;
+  flex-wrap: wrap;
+}
+
+.container-articles-blog {
+  margin: 200px auto;
+}
+
+.card-articles-tutos {
+  margin: 0 10px;
+  flex-shrink: 0;
+  width: 300px;
+  height: fit-content;
+}
+.card-articles-tutos img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.card-articles-tutos h4, .card-articles-tutos button {
+  margin: 20px 0;
+}
+
+.card-articles-blog {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.card-articles-blog img {
+  width: 100%;
+  height: fit-content;
+  object-fit: cover;
+}
+
+header {
+  width: 100vw;
+  background: #fff;
+}
+header nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 110px;
+}
+header nav ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: raw;
+}
+header nav ul li {
+  margin: 0 15px;
+}
+
+.hero {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../images/blog/bg-hero.jpeg");
+  background-size: auto, cover;
+  background-position: center;
+  width: 100%;
+  height: calc(70vh - 110px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding-left: 10%;
+  position: relative;
+  overflow: hidden;
+}
+.hero h1 {
+  color: #fff;
+}
+.hero .subtitle {
+  color: #fff;
+}
+
+.nav {
+  height: 280px;
+  background: #F0F4F0;
+  display: flex;
+  align-items: center;
+}
+.nav ul {
+  display: flex;
+  align-items: center;
+}
+.nav ul li:not(:nth-child(1)) {
+  margin: 0 20px;
+}
+
+/*# sourceMappingURL=main.css.map */
