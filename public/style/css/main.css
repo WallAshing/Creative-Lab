@@ -141,11 +141,27 @@ button:hover {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
+  margin: 100px 0;
 }
 .card-articles-blog img {
+  grid-column: 2/3;
+  grid-row: 1/2;
   width: 100%;
   height: fit-content;
   object-fit: cover;
+}
+.card-articles-blog .description-articles-blog {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.card-articles-blog .description-articles-blog h4 {
+  margin: 50px 0 20px 0;
+}
+.card-articles-blog:nth-child(even) img {
+  grid-column: 1/2;
+}
+.card-articles-blog:nth-child(even) .description-articles-blog {
+  grid-column: 2/3;
 }
 
 header {
