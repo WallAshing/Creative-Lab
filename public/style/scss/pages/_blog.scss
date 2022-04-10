@@ -14,6 +14,8 @@
     padding: 170px 0 250px 0;
 }
 
+// Tutos
+
 .container-articles-tutos{
     display: flex;
     justify-content: space-evenly;
@@ -67,5 +69,88 @@
         .description-articles-blog{
             grid-column: 2/3;
         }
+    }
+}
+
+// ********** Projets ********** 
+// =============================
+
+// Container
+
+.container-articles-projets-blog{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 60px;
+    background: $color-light-green;
+}
+.container-articles-projets-blog_top{
+    padding-bottom: 200px;
+    .card-articles-projets-blog{
+        margin-top: -100px;
+    }
+}
+.container-articles-projets-blog_bottom{
+    margin: 200px 0 300px 0;
+}
+
+.container-slider-projets-blog{
+    margin: 200px 0 300px;
+    display: flex;
+    grid-gap: 10px;
+    overflow: scroll;
+    padding: 0 10px;
+}
+
+.video-presdentation-blog{
+    background: $color-white;
+    padding: 100px 0;
+}
+
+
+// Cards
+
+.card-articles-projets-blog{
+    width: 100%;
+    position: relative;
+    img{
+        object-fit: cover;
+        width: 100%;
+        height: 500px;
+    }
+    .description-card-projets-blog{
+        padding: 30px;
+        width: 80%;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: $color-white;
+        border-radius: $radius-medium;
+        p{
+            margin: 30px 0;
+        }
+    }
+}
+
+.card-slider-projets-blog{
+    flex-shrink: 0;
+    width: 300px;
+    img{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+}
+
+.card-video-presentation-blog{
+    display: block;
+    margin: 0 auto;
+    width: clamp(300px, 80%, 1000px);
+    h3{
+        margin-top: 10px;
+    }
+    video{
+        width: 100%;
     }
 }
