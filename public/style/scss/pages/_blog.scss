@@ -77,16 +77,16 @@
 
 // Container
 
-.container-articles-projets-blog{
+.container-articles-projets-blog, .container-articles-actu-blog{
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 60px;
     background: $color-light-green;
 }
-.container-articles-projets-blog_top{
+.container-articles-projets-blog_top, .container-articles-actu-blog{
     padding-bottom: 200px;
-    .card-articles-projets-blog{
+    .card-articles-projets-blog, .card-articles-actu-blog:nth-child(1), .card-articles-actu-blog:nth-child(2){
         margin-top: -100px;
     }
 }
@@ -105,6 +105,19 @@
 .video-presdentation-blog{
     background: $color-white;
     padding: 100px 0;
+}
+
+.main-article-actu-blog{
+    width: 100%;
+    img{
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        margin-bottom: 60px;
+    }
+    h3, .legend, .text, button{
+        margin: 20px 0;
+    }
 }
 
 
@@ -152,5 +165,23 @@
     }
     video{
         width: 100%;
+    }
+}
+
+.card-articles-actu-blog{
+    width: 100%;
+    background: $color-white;
+    border-radius: $radius-medium;
+    overflow: hidden;
+    img{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+    h4, button{
+        margin: 20px;
+    }
+    .text{
+        margin: 0 20px;
     }
 }
