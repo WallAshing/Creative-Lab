@@ -164,7 +164,7 @@ button:hover {
   grid-column: 2/3;
 }
 
-.container-articles-projets-blog {
+.container-articles-projets-blog, .container-articles-actu-blog {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -172,10 +172,10 @@ button:hover {
   background: #F0F4F0;
 }
 
-.container-articles-projets-blog_top {
+.container-articles-projets-blog_top, .container-articles-actu-blog {
   padding-bottom: 200px;
 }
-.container-articles-projets-blog_top .card-articles-projets-blog {
+.container-articles-projets-blog_top .card-articles-projets-blog, .container-articles-projets-blog_top .card-articles-actu-blog:nth-child(1), .container-articles-projets-blog_top .card-articles-actu-blog:nth-child(2), .container-articles-actu-blog .card-articles-projets-blog, .container-articles-actu-blog .card-articles-actu-blog:nth-child(1), .container-articles-actu-blog .card-articles-actu-blog:nth-child(2) {
   margin-top: -100px;
 }
 
@@ -194,6 +194,19 @@ button:hover {
 .video-presdentation-blog {
   background: #fff;
   padding: 100px 0;
+}
+
+.main-article-actu-blog {
+  width: 100%;
+}
+.main-article-actu-blog img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  margin-bottom: 60px;
+}
+.main-article-actu-blog h3, .main-article-actu-blog .legend, .main-article-actu-blog .text, .main-article-actu-blog button {
+  margin: 20px 0;
 }
 
 .card-articles-projets-blog {
@@ -239,6 +252,24 @@ button:hover {
 }
 .card-video-presentation-blog video {
   width: 100%;
+}
+
+.card-articles-actu-blog {
+  width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.card-articles-actu-blog img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.card-articles-actu-blog h4, .card-articles-actu-blog button {
+  margin: 20px;
+}
+.card-articles-actu-blog .text {
+  margin: 0 20px;
 }
 
 header {
