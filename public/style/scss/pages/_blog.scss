@@ -14,11 +14,6 @@
     padding: 170px 0 250px 0;
 }
 
-<<<<<<< HEAD
-// Tutos
-
-=======
->>>>>>> 39e4a7a (merge)
 .container-articles-tutos{
     display: flex;
     justify-content: space-evenly;
@@ -45,15 +40,10 @@
     height: fit-content;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 39e4a7a (merge)
 .card-articles-blog{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-<<<<<<< HEAD
     margin: 100px 0;
     @media screen and (max-width : 1000px) {
         display: flex;
@@ -62,14 +52,10 @@
     img{
         grid-column: 2/3;
         grid-row: 1/2;
-=======
-    img{
->>>>>>> 39e4a7a (merge)
         width: 100%;
         height: fit-content;
         object-fit: cover;
     }
-<<<<<<< HEAD
     .description-articles-blog{
         grid-column: 1/2;
         grid-row: 1/2;
@@ -87,10 +73,6 @@
     }
 }
 
-// ********** Projets ********** 
-// =============================
-
-// Container
 
 .container-articles-projets-blog, .container-articles-actu-blog{
     width: 100%;
@@ -212,6 +194,5 @@
     .text{
         margin: 0 20px;
     }
-=======
->>>>>>> 39e4a7a (merge)
+
 }
