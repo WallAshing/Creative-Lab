@@ -1,0 +1,51 @@
+// **** TYPO **** //
+// ============== //
+
+h1{
+    @extend %font-NeuzeitGrotesk-black;
+    font-size: 6.4em;
+    color: $color-black;
+}
+h2{
+    @extend %font-NeuzeitGrotesk-black;
+    font-size: 6.4em;
+    color: $color-black;
+}
+h3{
+    @extend %font-NeuzeitGrotesk-black;
+    font-size: 4.6em;
+    color: $color-grey;
+}
+h4{
+    @extend %font-NeuzeitGrotesk-bold;
+    font-size: 2.8em;
+    color: $color-black;
+}
+.text{
+    @extend %font-NeuzeitGrotesk-light;
+    font-size: 2.2em;
+    color: $color-black;
+}
+.legend{
+    @extend %font-NeuzeitGrotesk-light;
+    font-size: 2.2em;
+    color: $color-grey;
+}
+.subtitle{
+    @extend %font-NeuzeitGrotesk-bold;
+    font-size: 2.8em;
+}
+a, .link{
+    @extend %font-NeuzeitGrotesk-regular;
+    font-size: 2em;
+    text-decoration: none;
+    color: $color-black;
+    cursor: pointer;
+    &:hover{
+        font-weight: 700;
+        // color: $color-green;
+    }
+}
+li{
+    list-style-type: none;
+}

@@ -1,0 +1,28 @@
+// **** PLACEHOLDERS **** //
+// ====================== //
+
+%flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%font-NeuzeitGrotesk-black{
+    font-family: 'Neuzeit Grotesk', sans-serif;
+    font-weight: 900;
+}
+%font-NeuzeitGrotesk-bold{
+    font-family: 'Neuzeit Grotesk', sans-serif;
+    font-weight: 700;
+}
+%font-NeuzeitGrotesk-regular{
+    font-family: 'Neuzeit Grotesk', sans-serif;
+    font-weight: 400;
+}
+%font-NeuzeitGrotesk-light{
+    font-family: 'Neuzeit Grotesk', sans-serif;
+    font-weight: 200;
+}
+
+// How tu use :
+// @extend %center;

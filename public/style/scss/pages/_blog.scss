@@ -1,0 +1,217 @@
+// **** PAGE **** //
+// ============== //
+
+.sections-blog{
+    display: none;
+}
+.visible{
+    display: block;
+}
+
+.container-description{
+    background: $color-white;
+    width: 100vw;
+    padding: 170px 0 250px 0;
+}
+
+<<<<<<< HEAD
+// Tutos
+
+=======
+>>>>>>> 39e4a7a (merge)
+.container-articles-tutos{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: -80px;
+    flex-wrap: wrap;
+}
+.container-articles-blog{
+    margin: 200px auto;
+}
+
+.card-articles-tutos{
+    margin: 0 10px;
+    flex-shrink: 0;
+    img{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+    h4, button{
+        margin: 20px 0;
+    }
+    width: 300px;
+    height: fit-content;
+}
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 39e4a7a (merge)
+.card-articles-blog{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+<<<<<<< HEAD
+    margin: 100px 0;
+    @media screen and (max-width : 1000px) {
+        display: flex;
+        flex-direction: column;
+    }
+    img{
+        grid-column: 2/3;
+        grid-row: 1/2;
+=======
+    img{
+>>>>>>> 39e4a7a (merge)
+        width: 100%;
+        height: fit-content;
+        object-fit: cover;
+    }
+<<<<<<< HEAD
+    .description-articles-blog{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        h4{
+            margin: 50px 0 20px 0;
+        }
+    }
+    &:nth-child(even){
+        img{
+            grid-column: 1/2;
+        }
+        .description-articles-blog{
+            grid-column: 2/3;
+        }
+    }
+}
+
+// ********** Projets ********** 
+// =============================
+
+// Container
+
+.container-articles-projets-blog, .container-articles-actu-blog{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 60px;
+    background: $color-light-green;
+    @media screen and (max-width: 800px) {
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+    }
+}
+.container-articles-projets-blog_top, .container-articles-actu-blog{
+    padding-bottom: 200px;
+    .card-articles-projets-blog, .card-articles-actu-blog:nth-child(1), .card-articles-actu-blog:nth-child(2){
+        margin-top: -100px;
+    }
+    @media screen and (max-width : 800px) {
+        .card-articles-actu-blog:nth-child(2){
+            margin-top: 0px;
+        }
+        .card-articles-projets-blog:nth-child(1){
+            margin-bottom: 300px;
+        }
+    }
+}
+.container-articles-projets-blog_bottom{
+    margin: 200px auto 300px auto;
+}
+
+.container-slider-projets-blog{
+    margin: 200px 0 300px;
+    display: flex;
+    grid-gap: 10px;
+    overflow: scroll;
+    padding: 0 10px;
+}
+
+.video-presdentation-blog{
+    background: $color-white;
+    padding: 100px 0;
+}
+
+.main-article-actu-blog{
+    width: 100%;
+    img{
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        margin-bottom: 60px;
+    }
+    h3, .legend, .text, button{
+        margin: 20px 0;
+    }
+}
+
+
+// Cards
+
+.card-articles-projets-blog{
+    width: 100%;
+    position: relative;
+    img{
+        object-fit: cover;
+        width: 100%;
+        height: 500px;
+    }
+    .description-card-projets-blog{
+        padding: 30px;
+        width: 80%;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: $color-white;
+        border-radius: $radius-medium;
+        p{
+            margin: 30px 0;
+        }
+    }
+}
+
+.card-slider-projets-blog{
+    flex-shrink: 0;
+    width: 300px;
+    img{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+}
+
+.card-video-presentation-blog{
+    display: block;
+    margin: 0 auto;
+    width: clamp(300px, 80%, 1000px);
+    h3{
+        margin-top: 10px;
+    }
+    video{
+        width: 100%;
+    }
+}
+
+.card-articles-actu-blog{
+    margin-bottom: 20px;
+    width: 100%;
+    background: $color-white;
+    border-radius: $radius-medium;
+    overflow: hidden;
+    img{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+    h4, button{
+        margin: 20px;
+    }
+    .text{
+        margin: 0 20px;
+    }
+=======
+>>>>>>> 39e4a7a (merge)
+}

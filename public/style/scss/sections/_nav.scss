@@ -1,0 +1,16 @@
+// **** NAV **** //
+// ============= //
+
+.nav{
+    height: 280px;
+    background: $color-light-green;
+    display: flex;
+    align-items: center;
+    ul{
+        display: flex;
+        align-items: center;
+        li:not(:nth-child(1)){
+            margin: 0 20px;
+        }
+    }
+}

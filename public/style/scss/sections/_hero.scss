@@ -1,0 +1,25 @@
+// **** HERO **** //
+// ============== //
+
+.hero{
+    // background-image: rgba(0, 0, 0, 0.285), url("../../../images/blog/bg-hero.jpeg");
+    // background-size: auto, cover;
+    background:linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5)),url("../../../images/blog/bg-hero.jpeg");
+    background-size: auto, cover;
+    background-position: center;
+    width: 100%;
+    height: calc(70vh - 110px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-left: 10%;
+    position: relative;
+    overflow: hidden;
+    h1{
+        color: $color-white;
+    }
+    .subtitle{
+        color: $color-white;
+    }
+}

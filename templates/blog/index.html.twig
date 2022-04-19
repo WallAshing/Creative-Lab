@@ -1,20 +1,319 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello BlogController!{% endblock %}
+{% block title %}CreaLab - Blog{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <section class="hero margin-body">
+        <h1>Blog du CréativLab</h1>
+        <p class="subtitle">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
+    </section>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/Users/louisperrenot/Documents/Dev/sf/bap2/src/Controller/BlogController.php'|file_link(0) }}">src/Controller/BlogController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/Users/louisperrenot/Documents/Dev/sf/bap2/templates/blog/index.html.twig'|file_link(0) }}">templates/blog/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <nav class="margin-body nav">
+        <ul>
+            <li><p class="link btn-link-blog" id="section-tutos">Tutoriel</li>
+            <li><p class="link btn-link-blog" id="section-projects">Projets</li>
+            <li><p class="link btn-link-blog" id="section-actu">Actualités techno</li>
+        </ul>
+    </nav>
+
+    <section class="sections-blog section-tutos visible">
+
+        <div class="container-description">
+            <div class="description margin-body">
+
+                <h2>Les tutos</h2>
+
+                <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+
+            </div>
+        </div>
+
+        <div class="container-articles-tutos margin-body">
+<<<<<<< HEAD
+
+            {# Card article tutos #}
+=======
+>>>>>>> 39e4a7a (merge)
+            <div class="card-articles-tutos">
+                <img src={{asset("images/blog/bg-hero.jpeg")}} alt="image d'illustration de l'article">
+                <h4>Tuto : Comment …?</h4>
+                <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod. </p>
+                <button>Lire</button>
+            </div>
+<<<<<<< HEAD
+            {# End card article tutos #}
+
+            {# Card article tutos #}
+=======
+>>>>>>> 39e4a7a (merge)
+            <div class="card-articles-tutos">
+                <img src={{asset("images/blog/bg-hero.jpeg")}} alt="image d'illustration de l'article">
+                <h4>Tuto : Comment …?</h4>
+                <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod. </p>
+                <button>Lire</button>
+            </div>
+<<<<<<< HEAD
+            {# End card article tutos #}
+    
+            {# Card article tutos #}
+=======
+>>>>>>> 39e4a7a (merge)
+            <div class="card-articles-tutos">
+                <img src={{asset("images/blog/bg-hero.jpeg")}} alt="image d'illustration de l'article">
+                <h4>Tuto : Comment …?</h4>
+                <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod. </p>
+                <button>Lire</button>
+            </div>
+<<<<<<< HEAD
+            {# End card article tutos #}
+        </div>
+        
+        <div class="margin-body container-articles-blog">
+
+            {# Card article #}
+=======
+        </div>
+
+        <div class="margin-body container-articles-blog">
+        <div class="margin-body container-articles-blog">
+>>>>>>> 39e4a7a (merge)
+            <div class="card-articles-blog">
+                <img src={{asset("images/blog/bg-hero.jpeg")}} alt="image d'illustration de l'article">
+                <div class="description-articles-blog">
+                    <h3>Comment utiliser les imprimantes 3d du CréativLab ?</h3>
+                    <p class="legend">Publié le 20 03 22 par ...</p>
+                    <h4>Description de la vidéo</h4>
+                    <p class="text">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, </p>
+                </div>
+            </div>
+<<<<<<< HEAD
+            {# End card article #}
+
+            {# Card article #}
+            <div class="card-articles-blog">
+                <img src={{asset("images/blog/bg-hero.jpeg")}} alt="image d'illustration de l'article">
+=======
+        </div>
+        <div class="margin-body container-articles-blog">
+            <div class="card-articles-blog">
+>>>>>>> 39e4a7a (merge)
+                <div class="description-articles-blog">
+                    <h3>Comment utiliser les imprimantes 3d du CréativLab ?</h3>
+                    <p class="legend">Publié le 20 03 22 par ...</p>
+                    <h4>Description de la vidéo</h4>
+                    <p class="text">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, </p>
+                </div>
+<<<<<<< HEAD
+            </div>
+            {# End card article #}
+            
+=======
+                <img src={{asset("images/blog/bg-hero.jpeg")}} alt="image d'illustration de l'article">
+            </div>
+>>>>>>> 39e4a7a (merge)
+        </div>
+
+    </section>
+
+    <section class="sections-blog section-projects">
+
+        <div class="container-description">
+            <div class="description margin-body">
+
+                <h2>Projets</h2>
+
+                <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+
+            </div>
+        </div>
+
+<<<<<<< HEAD
+        <div class="container-articles-projets-blog container-articles-projets-blog_top margin-body">
+
+            {# Card article projets #}
+            <div class="card-articles-projets-blog">
+                <img src={{asset("images/blog/bg-hero.jpeg")}} alt="image d'illustration de l'article">
+                <div class="description-card-projets-blog">
+                    <h4>Titre</h4>
+                    <p class="text">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>
+                    <button>Lire</button>
+                </div>
+            </div>
+            {# End card article projets #}
+        
+            {# Card article projets #}
+            <div class="card-articles-projets-blog">
+                <img src={{asset("images/blog/bg-hero.jpeg")}} alt="image d'illustration de l'article">
+                <div class="description-card-projets-blog">
+                    <h4>Titre</h4>
+                    <p class="text">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>
+                    <button>Lire</button>
+                </div>
+            </div>
+            {# End card article projets #}
+
+        </div>
+
+        <div class="container-slider-projets-blog">
+
+            {# Slider item #}
+            <div class="card-slider-projets-blog">
+                <img src={{asset("images/blog/bg-hero.jpeg")}} alt="image d'illustration de l'article">
+                <h3>Titre</h3>
+            </div>
+            {# End slider item #}
+
+            {# Slider item #}
+            <div class="card-slider-projets-blog">
+                <img src={{asset("images/blog/bg-hero.jpeg")}} alt="image d'illustration de l'article">
+                <h3>Titre</h3>
+            </div>
+            {# End slider item #}
+
+            {# Slider item #}
+            <div class="card-slider-projets-blog">
+                <img src={{asset("images/blog/bg-hero.jpeg")}} alt="image d'illustration de l'article">
+                <h3>Titre</h3>
+            </div>
+            {# End slider item #}
+
+            {# Slider item #}
+            <div class="card-slider-projets-blog">
+                <img src={{asset("images/blog/bg-hero.jpeg")}} alt="image d'illustration de l'article">
+                <h3>Titre</h3>
+            </div>
+            {# End slider item #}
+
+            {# Slider item #}
+            <div class="card-slider-projets-blog">
+                <img src={{asset("images/blog/bg-hero.jpeg")}} alt="image d'illustration de l'article">
+                <h3>Titre</h3>
+            </div>
+            {# End slider item #}
+
+            {# Slider item #}
+            <div class="card-slider-projets-blog">
+                <img src={{asset("images/blog/bg-hero.jpeg")}} alt="image d'illustration de l'article">
+                <h3>Titre</h3>
+            </div>
+            {# End slider item #}
+
+        </div>
+
+        <div class="video-presdentation-blog">
+            <div class="card-video-presentation-blog">
+                <video controls>
+                    <source src={{asset("video/blog/video-blog.mp4")}}
+                            type="video/mp4">
+                </video>
+                <h3>Titre de la vidéo</h3>
+            </div>
+        </div>
+
+        <div class="container-articles-projets-blog container-articles-projets-blog_bottom margin-body">
+
+            {# Card article projets #}
+            <div class="card-articles-projets-blog">
+                <img src={{asset("images/blog/bg-hero.jpeg")}} alt="image d'illustration de l'article">
+                <div class="description-card-projets-blog">
+                    <h4>Titre</h4>
+                    <p class="text">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>
+                    <button>Lire</button>
+                </div>
+            </div>
+            {# End card article projets #}
+        
+            {# Card article projets #}
+            <div class="card-articles-projets-blog">
+                <img src={{asset("images/blog/bg-hero.jpeg")}} alt="image d'illustration de l'article">
+                <div class="description-card-projets-blog">
+                    <h4>Titre</h4>
+                    <p class="text">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>
+                    <button>Lire</button>
+                </div>
+            </div>
+            {# End card article projets #}
+
+        </div>
+
+=======
+>>>>>>> 39e4a7a (merge)
+    </section>
+
+    <section class="sections-blog section-actu">
+
+        <div class="container-description">
+            <div class="description margin-body">
+
+                <h2>Actualités techno</h2>
+
+                <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+
+            </div>
+        </div>
+
+<<<<<<< HEAD
+        <div class="container-articles-actu-blog margin-body">
+
+            {# Card article actualité #}
+            <div class="card-articles-actu-blog">
+                <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
+                <h4>Titre</h4>
+                <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed </p>
+                <button>Lire</button>
+            </div>
+            {# End card article actualité #}
+
+            {# Card article actualité #}
+            <div class="card-articles-actu-blog">
+                <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
+                <h4>Titre</h4>
+                <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed </p>
+                <button>Lire</button>
+            </div>
+            {# End card article actualité #}
+            
+            {# Card article actualité #}
+            <div class="card-articles-actu-blog">
+                <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
+                <h4>Titre</h4>
+                <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed </p>
+                <button>Lire</button>
+            </div>
+            {# End card article actualité #}
+
+            {# Card article actualité #}
+            <div class="card-articles-actu-blog">
+                <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
+                <h4>Titre</h4>
+                <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed </p>
+                <button>Lire</button>
+            </div>
+            {# End card article actualité #}
+
+        </div>
+
+        <div class="main-article-actu-blog margin-body">
+                <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
+                <h3>Comment utiliser les  imprimantes 3D du Créativ'Lab ?</h3>
+                <p class="legend">Article publié le 20.03.22 par ...</p>
+                <p class="text">
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur</p>
+                <button>Lire la suite</button>
+        </div>
+
+=======
+>>>>>>> 39e4a7a (merge)
+    </section>
+
 {% endblock %}
