@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+{% block title %}Register{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/easyadmin/app.css') }}">
+{% endblock %}
+{% block head %}{% endblock %}
+{% block body_class %}ea page-login{% endblock %}
+{% block body %}
+    <div style="width: 100%; display: flex; align-items: center">
+        <div class="login-wrapper" style="margin-top: 0 !important; padding-top: 100px">
+            <section class="content">
+                {{ form_start(registrationForm) }}
+                <div class="form-group">
+                    {{ form_label(registrationForm.email, 'Enter an email', {
+                        'label_attr': {'class': 'form-control-label required'}
+                    }) }}
+                    <div class="form-widget">
+                        {{ form_widget(registrationForm.email) }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    {{ form_label(registrationForm.name, 'Rentre ton nom', {
+                        'label_attr': {'class': 'form-control-label required'}
+                    }) }}
+                    <div class="form-widget">
+                        {{ form_widget(registrationForm.name) }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    
+                </div>
+                {#        {{ form_row(registrationForm.email) }}#}
+                <div class="form-group">
+                    {{ form_label(registrationForm.plainPassword, 'Enter a strong password', {
+                        'label_attr': {'class': 'form-control-label required'}
+                    }) }}
+                    <div class="form-widget">
+                        {{ form_widget(registrationForm.plainPassword) }}
+                    </div>
+                </div>
+                {#            {{ form_row(registrationForm.plainPassword, {#}
+                {#                label: 'Password'#}
+                {#            }) }}#}
+                <div class="form-group">
+                    {{ form_label(registrationForm.Picture, 'Please give us a picture', {
+                        'label_attr': {'class': 'form-control-file-label'}
+                    }) }}
+                    {{ form_widget(registrationForm.Picture) }}
+                </div>
+                <div class="form-group">
+                    {{ form_widget(registrationForm.agreeTerms) }}
+                    {{ form_label(registrationForm.agreeTerms, 'Please agree our terms', {
+                        'label_attr': {'class': 'form-check-label'}
+                    }) }}
+                </div>
+                {#            {{ form_row(registrationForm.agreeTerms) }}#}
+
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
+                {{ form_end(registrationForm) }}
+                <a href="{{ path('app_login') }}" class="btn btn-secondary mt-2">Login</a>
+            </section>
+        </div>
+    </div>
+{% endblock %}
+{% block footer %}{% endblock %}
