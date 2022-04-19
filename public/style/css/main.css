@@ -152,6 +152,8 @@ button:hover {
 .card-articles-blog img {
   grid-column: 2/3;
   grid-row: 1/2;
+}
+.card-articles-blog img {
   width: 100%;
   height: fit-content;
   object-fit: cover;
