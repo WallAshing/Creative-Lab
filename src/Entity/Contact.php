@@ -4,7 +4,6 @@ namespace App\Entity;
 
 use App\Repository\ContactRepository;
 use Doctrine\ORM\Mapping as ORM;
-use Gedmo\Mapping\Annotation as Gedmo;
 
 #[ORM\Entity(repositoryClass: ContactRepository::class)]
 class Contact
@@ -28,11 +27,9 @@ class Contact
     private $discordTag;
 
     #[ORM\Column(type: 'date')]
-    #[Gedmo\Timestampable(on: 'create')]
     private $createdAt;
 
     #[ORM\Column(type: 'date', nullable: true)]
-    #[Gedmo\Timestampable(on: 'update')]
     private $updatedAt;
 
     public function getId(): ?int
