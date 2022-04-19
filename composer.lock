@@ -5,10 +5,14 @@
         "This file is @generated automatically"
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
     "content-hash": "782ebd4cb0e5d3dbbf3e54fda8cc928f",
 =======
     "content-hash": "ad8d563bd42f6517c9371bb9785009ca",
 >>>>>>> 4f685b2 (Update entity & CRUD post)
+=======
+    "content-hash": "54dc3605cce4f7c8deb7ddaffab75044",
+>>>>>>> 39e4a7a (merge)
     "packages": [
         {
             "name": "behat/transliterator",

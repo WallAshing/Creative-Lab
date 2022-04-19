@@ -141,6 +141,7 @@ button:hover {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
+<<<<<<< HEAD
   margin: 100px 0;
 }
 @media screen and (max-width: 1000px) {
@@ -152,10 +153,15 @@ button:hover {
 .card-articles-blog img {
   grid-column: 2/3;
   grid-row: 1/2;
+=======
+}
+.card-articles-blog img {
+>>>>>>> 39e4a7a (merge)
   width: 100%;
   height: fit-content;
   object-fit: cover;
 }
+<<<<<<< HEAD
 .card-articles-blog .description-articles-blog {
   grid-column: 1/2;
   grid-row: 1/2;
@@ -292,6 +298,8 @@ button:hover {
 .card-articles-actu-blog .text {
   margin: 0 20px;
 }
+=======
+>>>>>>> 39e4a7a (merge)
 
 header {
   width: 100vw;
@@ -347,6 +355,7 @@ header nav ul li {
   margin: 0 20px;
 }
 
+<<<<<<< HEAD
 footer {
   background: #484849;
   display: flex;
@@ -385,4 +394,6 @@ footer .footer-right .footer-nav-social-media ul li:not(:last-child) {
   padding: 0 40px;
 }
 
+=======
+>>>>>>> 39e4a7a (merge)
 /*# sourceMappingURL=main.css.map */
