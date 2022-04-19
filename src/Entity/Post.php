@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\PostRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 #[ORM\Entity(repositoryClass: PostRepository::class)]
 class Post
@@ -29,9 +30,11 @@ class Post
     private $Utilisateur;
 
     #[ORM\Column(type: 'date')]
+    #[Gedmo\Timestampable(on: 'create')]
     private $createdAt;
 
     #[ORM\Column(type: 'date', nullable: true)]
+    #[Gedmo\Timestampable(on: 'update')]
     private $updatedAt;
 
     #[ORM\Column(type: 'text', nullable: true)]
