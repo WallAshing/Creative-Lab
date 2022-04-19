@@ -1,0 +1,21 @@
+// **** HEADER **** //
+// ================ //
+
+header{
+    width: 100vw;
+    background: $color-white;
+    nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 110px;
+        ul{
+            display: flex;
+            justify-content: center;
+            flex-direction: raw;
+            li{
+                margin: 0 15px;
+            }
+        }
+    }
+}

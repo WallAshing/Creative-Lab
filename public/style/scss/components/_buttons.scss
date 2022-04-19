@@ -1,0 +1,18 @@
+// **** BUTTONS **** //
+// ================= //
+
+button{
+    background: $color-linear;
+    padding: 13px 20px;
+    border: none;
+    cursor: pointer;
+    color: $color-white;
+    border-radius: 999px;
+    @extend %font-NeuzeitGrotesk-bold;
+    &:hover{
+        background: $color-linear-invert;
+    }
+    // &:active{
+    //     border: 2px solid $color-green;
+    // }
+}
