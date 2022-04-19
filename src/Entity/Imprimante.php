@@ -6,7 +6,6 @@ use App\Repository\ImprimanteRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-use Gedmo\Mapping\Annotation as Gedmo;
 
 #[ORM\Entity(repositoryClass: ImprimanteRepository::class)]
 class Imprimante
@@ -26,11 +25,9 @@ class Imprimante
     private $working;
 
     #[ORM\Column(type: 'date')]
-    #[Gedmo\Timestampable(on: 'create')]
     private $createdAt;
 
     #[ORM\Column(type: 'date', nullable: true)]
-    #[Gedmo\Timestampable(on: 'update')]
     private $updatedAt;
 
     #[ORM\Column(type: 'string', length: 255)]

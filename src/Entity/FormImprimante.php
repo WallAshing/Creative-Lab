@@ -4,7 +4,6 @@ namespace App\Entity;
 
 use App\Repository\FormImprimanteRepository;
 use Doctrine\ORM\Mapping as ORM;
-use Gedmo\Mapping\Annotation as Gedmo;
 
 #[ORM\Entity(repositoryClass: FormImprimanteRepository::class)]
 class FormImprimante
@@ -27,11 +26,9 @@ class FormImprimante
     private $stlFile;
 
     #[ORM\Column(type: 'date')]
-    #[Gedmo\Timestampable(on: 'create')]
     private $createdAt;
 
     #[ORM\Column(type: 'date', nullable: true)]
-    #[Gedmo\Timestampable(on: 'update')]
     private $updatedAt;
 
     #[ORM\ManyToOne(targetEntity: Imprimante::class, inversedBy: 'formImprimante')]
