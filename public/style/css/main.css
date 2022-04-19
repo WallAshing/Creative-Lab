@@ -347,4 +347,42 @@ header nav ul li {
   margin: 0 20px;
 }
 
+footer {
+  background: #484849;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 100px 50px !important;
+}
+footer .text {
+  color: white;
+}
+footer .text span {
+  font-weight: bold;
+}
+footer .footer-left .footer-nav {
+  margin: 100px 0;
+}
+footer .footer-left .footer-nav ul {
+  display: flex;
+}
+footer .footer-left .footer-nav ul li:not(:first-child) {
+  padding: 0 10px;
+}
+footer .footer-right {
+  display: flex;
+  justify-content: flex-end;
+}
+@media screen and (max-width: 1000px) {
+  footer .footer-right {
+    width: 100%;
+  }
+}
+footer .footer-right .footer-nav-social-media ul {
+  display: flex;
+}
+footer .footer-right .footer-nav-social-media ul li:not(:last-child) {
+  padding: 0 40px;
+}
+
 /*# sourceMappingURL=main.css.map */
