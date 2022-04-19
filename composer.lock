@@ -8,6 +8,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "content-hash": "782ebd4cb0e5d3dbbf3e54fda8cc928f",
 =======
     "content-hash": "ad8d563bd42f6517c9371bb9785009ca",
@@ -21,6 +22,9 @@
 =======
     "content-hash": "54dc3605cce4f7c8deb7ddaffab75044",
 >>>>>>> 587b96d (:construction: Page Blog => Tutos Done)
+=======
+    "content-hash": "ad8d563bd42f6517c9371bb9785009ca",
+>>>>>>> 21746fd (merge)
     "packages": [
         {
             "name": "behat/transliterator",
