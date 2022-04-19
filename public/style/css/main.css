@@ -143,6 +143,12 @@ button:hover {
   gap: 30px;
   margin: 100px 0;
 }
+@media screen and (max-width: 1000px) {
+  .card-articles-blog {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .card-articles-blog img {
   grid-column: 2/3;
   grid-row: 1/2;
@@ -171,12 +177,26 @@ button:hover {
   grid-gap: 60px;
   background: #F0F4F0;
 }
+@media screen and (max-width: 800px) {
+  .container-articles-projets-blog, .container-articles-actu-blog {
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+  }
+}
 
 .container-articles-projets-blog_top, .container-articles-actu-blog {
   padding-bottom: 200px;
 }
 .container-articles-projets-blog_top .card-articles-projets-blog, .container-articles-projets-blog_top .card-articles-actu-blog:nth-child(1), .container-articles-projets-blog_top .card-articles-actu-blog:nth-child(2), .container-articles-actu-blog .card-articles-projets-blog, .container-articles-actu-blog .card-articles-actu-blog:nth-child(1), .container-articles-actu-blog .card-articles-actu-blog:nth-child(2) {
   margin-top: -100px;
+}
+@media screen and (max-width: 800px) {
+  .container-articles-projets-blog_top .card-articles-actu-blog:nth-child(2), .container-articles-actu-blog .card-articles-actu-blog:nth-child(2) {
+    margin-top: 0px;
+  }
+  .container-articles-projets-blog_top .card-articles-projets-blog:nth-child(1), .container-articles-actu-blog .card-articles-projets-blog:nth-child(1) {
+    margin-bottom: 300px;
+  }
 }
 
 .container-articles-projets-blog_bottom {
@@ -255,6 +275,7 @@ button:hover {
 }
 
 .card-articles-actu-blog {
+  margin-bottom: 20px;
   width: 100%;
   background: #fff;
   border-radius: 16px;
