@@ -3,7 +3,7 @@ h3, h2, h1 {
   font-weight: 900;
 }
 
-button, .subtitle, h4 {
+header nav .connexion button a, button, .subtitle, h4 {
   font-family: "Neuzeit Grotesk", sans-serif;
   font-weight: 700;
 }
@@ -152,8 +152,6 @@ button:hover {
 .card-articles-blog img {
   grid-column: 2/3;
   grid-row: 1/2;
-}
-.card-articles-blog img {
   width: 100%;
   height: fit-content;
   object-fit: cover;
@@ -312,6 +310,10 @@ header nav ul {
 }
 header nav ul li {
   margin: 0 15px;
+}
+header nav .connexion button a {
+  font-size: 1.3rem;
+  color: #fff;
 }
 
 .hero {

@@ -19,16 +19,25 @@ class RegistrationController extends AbstractController
     #[Route('/register', name: 'app_register')]
     public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, UserAuthenticatorInterface $userAuthenticator, AppAuthenticator $authenticator, EntityManagerInterface $entityManager): Response
     {
+        if ($this->getUser()) {
+            return $this->redirectToRoute('app_app');
+        }
         $user = new User();
         $form = $this->createForm(RegistrationFormType::class, $user);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             // encode the plain password
-            $newsUserPicture = '';
-            $file = $form['Picture']->getData();
-            $extension = $file->guessExtension();
-            $file->move('upload/user/', random_int(2, 999999) . '.' . $extension);
+            if ($file = $form['Picture']->getData()) {
+                $newsUserPicture = '';
+                $extension = $file->guessExtension();
+                $newName = random_int(2, 999999) . '.' . $extension;
+                $file->move('upload/user/', $newName);
+                $user->setPicture($newName);
+            }
+            $user->setName($form['name']->getData());
+            $user->setPrenom($form['prenom']->getData());
+            $user->setEmail($form['email']->getData());
             $user->setRoles([
                 'ROLE_USER'
             ]);

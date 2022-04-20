@@ -28,7 +28,12 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    
+                    {{ form_label(registrationForm.prenom, 'Rentre ton prenom', {
+                        'label_attr': {'class': 'form-control-label required'}
+                    }) }}
+                    <div class="form-widget">
+                        {{ form_widget(registrationForm.prenom) }}
+                    </div>
                 </div>
                 {#        {{ form_row(registrationForm.email) }}#}
                 <div class="form-group">

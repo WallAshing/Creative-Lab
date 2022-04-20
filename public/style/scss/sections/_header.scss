@@ -17,5 +17,14 @@ header{
                 margin: 0 15px;
             }
         }
+        .connexion{
+            button {
+                a {
+                    font-size: 1.3rem;
+                    color: $color-white;
+                    @extend %font-NeuzeitGrotesk-bold;
+                }
+            }
+        }
     }
 }

@@ -41,6 +41,9 @@
             {# End card article tutos #}
 
             {# Card article tutos #}
+            {% for post in posts %}
+                {{ dump(post.category.name) }}
+            {% endfor %}
             <div class="card-articles-tutos">
                 <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
                 <h4>Tuto : Comment …?</h4>
