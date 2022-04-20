@@ -381,6 +381,26 @@ header nav .connexion button a {
   color: #fff;
 }
 
+.dropdown-connexion {
+  position: relative;
+}
+.dropdown-connexion:hover .dropdown-content {
+  display: flex;
+}
+.dropdown-connexion .dropdown-content {
+  display: none;
+  position: absolute;
+  transform: translate(-50%, -30%);
+  left: 50%;
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 16px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+}
+.dropdown-connexion .dropdown-content a {
+  margin: 0 15px;
+}
+
 .hero-home {
   width: 100%;
   height: calc(100vh - 110px);
