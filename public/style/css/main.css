@@ -3,7 +3,7 @@ h3, h2, h1 {
   font-weight: 900;
 }
 
-button, .subtitle, h4 {
+header nav .connexion button a, button, .subtitle, h4 {
   font-family: "Neuzeit Grotesk", sans-serif;
   font-weight: 700;
 }
@@ -375,6 +375,7 @@ button:hover {
   margin: 20px 0;
 }
 
+
 .article-description {
   padding: 50px 100px;
 }
@@ -434,6 +435,93 @@ header nav ul {
 }
 header nav ul li {
   margin: 0 15px;
+}
+header nav .connexion button a {
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.dropdown-connexion {
+  position: relative;
+}
+.dropdown-connexion:hover .dropdown-content {
+  display: flex;
+}
+.dropdown-connexion .dropdown-content {
+  display: none;
+  position: absolute;
+  transform: translate(-50%, -30%);
+  left: 50%;
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 16px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+}
+.dropdown-connexion .dropdown-content a {
+  margin: 0 15px;
+}
+
+.hero-home {
+  width: 100%;
+  height: calc(100vh - 110px);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.hero-home .card-hero-home {
+  background: #fff;
+  border-radius: 16px;
+  width: 70%;
+  margin-left: 10%;
+  padding: 80px 50px;
+  position: relative;
+}
+.hero-home .card-hero-home .text {
+  margin: 30px 0;
+  width: 80%;
+}
+@media screen and (max-width: 800px) {
+  .hero-home .card-hero-home {
+    width: 90%;
+    margin: 0 5%;
+    padding: 80px 20px;
+  }
+  .hero-home .card-hero-home .text {
+    width: 100%;
+  }
+}
+.hero-home .background-hero-home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.hero-home .background-hero-home .background-hero-green {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #68D880;
+  width: 30%;
+  height: 100%;
+  z-index: -1;
+}
+.hero-home .background-hero-home img {
+  top: 0;
+  right: 0;
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.hero-home .background-hero-home .img-parrallax {
+  z-index: 1;
+}
+@media screen and (max-width: 1200px) {
+  .hero-home .background-hero-home .img-parrallax {
+    display: none;
+  }
 }
 
 .dropdown-connexion {

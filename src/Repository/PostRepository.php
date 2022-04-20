@@ -73,4 +73,35 @@ class PostRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    public function sortByDate($category, $order): array
+    {
+        return $this->createQueryBuilder('p')
+            ->where('p.category = :category')
+            ->orderBy('p.createdAt', $order)
+            ->setMaxResults(2)
+            ->setParameter('category', $category)
+            ->getQuery()
+            ->getResult();
+    }
+
+    public function findAllByCategory($category): array
+    {
+        return $this->createQueryBuilder('p')
+            ->where('p.category = :category')
+            ->setParameter('category', $category)
+            ->getQuery()
+            ->getResult();
+    }
+
+    public function getOneByDate($category, $order): Post
+    {
+        return $this->createQueryBuilder('p')
+            ->where('p.category = :category')
+            ->orderBy('p.createdAt', $order)
+            ->setMaxResults(1)
+            ->setParameter('category', $category)
+            ->getQuery()
+            ->getSingleResult();
+    }
 }

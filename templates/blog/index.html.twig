@@ -30,62 +30,35 @@
         </div>
 
         <div class="container-articles_tutos container-articles margin-body">
-
-            {# Card article tutos #}
-            <div class="card-articles-tutos">
-                <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
-                <h4>Tuto : Comment …?</h4>
-                <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod. </p>
-                <button>Lire</button>
-            </div>
-            {# End card article tutos #}
-
-            {# Card article tutos #}
-            <div class="card-articles-tutos">
-                <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
-                <h4>Tuto : Comment …?</h4>
-                <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod. </p>
-                <button>Lire</button>
-            </div>
-            {# End card article tutos #}
-
-            {# Card article tutos #}
-            <div class="card-articles-tutos">
-                <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
-                <h4>Tuto : Comment …?</h4>
-                <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod. </p>
-                <button>Lire</button>
-            </div>
-            {# End card article tutos #}
+            {% for postTuto in postsTuto %}
+                {% if postTuto.isOnline %}
+                    <div class="card-articles-tutos">
+                        <img src="{{ asset('upload/posts/images/') }}{{ postTuto.picture }}" alt="image d'illustration de l'article">
+                        <h4>{{ postTuto.title | length > 20 ? postTuto.title | slice(0, 20) ~ '...' : postTuto.title }}</h4>
+                        <p class="text">{{ postTuto.description | length > 80 ? postTuto.description | slice(0, 77) ~ '...' : postTuto.description }}</p>
+                        <button>Lire</button>
+                    </div>
+                {% endif %}
+            {% endfor %}
         </div>
 
         <div class="margin-body container-articles-blog">
 
             {# Card article #}
-            <div class="card-articles-blog">
-                <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
-                <div class="description-articles-blog">
-                    <h3>Comment utiliser les imprimantes 3d du CréativLab ?</h3>
-                    <p class="legend">Publié le 20 03 22 par ...</p>
-                    <h4>Description de la vidéo</h4>
-                    <p class="text">
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, </p>
-                </div>
-            </div>
-            {# End card article #}
-
-            {# Card article #}
-            <div class="card-articles-blog">
-                <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
-                <div class="description-articles-blog">
-                    <h3>Comment utiliser les imprimantes 3d du CréativLab ?</h3>
-                    <p class="legend">Publié le 20 03 22 par ...</p>
-                    <h4>Description de la vidéo</h4>
-                    <p class="text">
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, </p>
-                </div>
-            </div>
-            {# End card article #}
+            {% for soonerTuto in soonerTutos %}
+                {% if soonerTuto.isOnline %}
+                    <div class="card-articles-blog">
+                        <img src="{{asset("upload/posts/images/")}}{{ soonerTuto.picture }}" alt="image d'illustration de l'article">
+                        <div class="description-articles-blog">
+                            <h3>{{ soonerTuto.title }}</h3>
+                            <p class="legend">Publié le {{ soonerTuto.createdAt | date("d m Y") }}</p>
+                            <h4>Description de la vidéo</h4>
+                            <p class="text">
+                                {{ soonerTuto.description | length > 430 ? soonerTuto.description | slice(0, 430) ~ '...' : soonerTuto.description }}</p>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
         </div>
 
     </section>
@@ -105,74 +78,35 @@
         <div class="container-articles-projets-blog container-articles-projets-blog_top margin-body">
 
             {# Card article projets #}
-            <div class="card-articles-projets-blog">
-                <img src={{asset("images/blog/bg-hero.jpeg")}} alt="image d'illustration de l'article">
-                <div class="description-card-projets-blog">
-                    <h4>Titre</h4>
-                    <p class="text">
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>
-                    <button>Lire</button>
-                </div>
-            </div>
-            {# End card article projets #}
-
-            {# Card article projets #}
-            <div class="card-articles-projets-blog">
-                <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
-                <div class="description-card-projets-blog">
-                    <h4>Titre</h4>
-                    <p class="text">
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>
-                    <button>Lire</button>
-                </div>
-            </div>
-            {# End card article projets #}
+            {% for postProjetDESC in postsProjetsDESC %}
+                {% if postProjetDESC.isOnline %}
+                    <div class="card-articles-projets-blog">
+                        <img src="{{asset("upload/posts/images/")}}{{ postProjetDESC.picture }}" alt="image d'illustration de l'article">
+                        <div class="description-card-projets-blog">
+                            <h4>{{ postProjetDESC.title | length > 20 ? postProjetDESC.title | slice(0, 20) ~ '...' : postProjetDESC.title }}</h4>
+                            <p class="text">
+                                {{ postProjetDESC.description | length > 80 ? postProjetDESC.description | slice(0, 77) ~ '...' : postProjetDESC.description }}</p>
+                            <button>Lire</button>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
 
         </div>
 
         <div class="container-slider-projets-blog">
 
             {# Slider item #}
-            <div class="card-slider-projets-blog">
-                <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
-                <h3>Titre</h3>
-            </div>
+            {% for postProjet in allPostProjets %}
+                {% if postProjet.isOnline %}
+                    <div class="card-slider-projets-blog">
+                        <img src="{{asset("upload/posts/images/")}}{{ postProjet.picture }}" alt="image d'illustration de l'article">
+                        <h3>{{ postProjet.title | length > 5 ? postProjet.title | slice(0, 5) ~ '...' : postProjet.title }}</h3>
+                    </div>
+                {% endif %}
+            {% endfor %}
             {# End slider item #}
 
-            {# Slider item #}
-            <div class="card-slider-projets-blog">
-                <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
-                <h3>Titre</h3>
-            </div>
-            {# End slider item #}
-
-            {# Slider item #}
-            <div class="card-slider-projets-blog">
-                <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
-                <h3>Titre</h3>
-            </div>
-            {# End slider item #}
-
-            {# Slider item #}
-            <div class="card-slider-projets-blog">
-                <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
-                <h3>Titre</h3>
-            </div>
-            {# End slider item #}
-
-            {# Slider item #}
-            <div class="card-slider-projets-blog">
-                <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
-                <h3>Titre</h3>
-            </div>
-            {# End slider item #}
-
-            {# Slider item #}
-            <div class="card-slider-projets-blog">
-                <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
-                <h3>Titre</h3>
-            </div>
-            {# End slider item #}
 
         </div>
 
@@ -189,28 +123,20 @@
         <div class="container-articles-projets-blog container-articles-projets-blog_bottom margin-body">
 
             {# Card article projets #}
-            <div class="card-articles-projets-blog">
-                <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
-                <div class="description-card-projets-blog">
-                    <h4>Titre</h4>
-                    <p class="text">
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>
-                    <button>Lire</button>
-                </div>
-            </div>
-            {# End card article projets #}
+            {% for postProjetASC in postsProjetsASC %}
+                {% if postProjetASC %}
+                    <div class="card-articles-projets-blog">
+                        <img src="{{asset("upload/posts/images/")}}{{ postProjetASC.picture }}" alt="image d'illustration de l'article">
+                        <div class="description-card-projets-blog">
+                            <h4>{{ postProjetASC.title | length > 20 ? postProjetASC.title | slice(0, 20) ~ '...' : postProjetASC.title }}</h4>
+                            <p class="text">
+                                {{ postProjetASC.description | length > 80 ? postProjetASC.description | slice(0, 77) ~ '...' : postProjetASC.description }}</p>
+                            <button>Lire</button>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
 
-            {# Card article projets #}
-            <div class="card-articles-projets-blog">
-                <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
-                <div class="description-card-projets-blog">
-                    <h4>Titre</h4>
-                    <p class="text">
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>
-                    <button>Lire</button>
-                </div>
-            </div>
-            {# End card article projets #}
 
         </div>
 
@@ -231,52 +157,26 @@
         <div class="container-articles-actu-blog margin-body">
 
             {# Card article actualité #}
-            <div class="card-articles-actu-blog">
-                <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
-                <h4>Titre</h4>
-                <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed </p>
-                <button>Lire</button>
-            </div>
-            {# End card article actualité #}
+            {% for postActu in postsActu %}
+                {% if postActu.isOnline %}
+                    <div class="card-articles-actu-blog">
+                        <img src="{{asset("upload/posts/images/")}}{{ postActu.picture }}" alt="image d'illustration de l'article">
+                        <h4>{{ postActu.title | length > 20 ? postActu.title | slice(0, 20) ~ '...' : postActu.title }}</h4>
+                        <p class="text">{{ postActu.description | length > 140 ? postActu.description | slice(0, 140) ~ '...' : postActu.description }}</p>
+                        <button>Lire</button>
+                    </div>
+                {% endif %}
+            {% endfor %}
 
-            {# Card article actualité #}
-            <div class="card-articles-actu-blog">
-                <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
-                <h4>Titre</h4>
-                <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed </p>
-                <button>Lire</button>
-            </div>
-            {# End card article actualité #}
-
-            {# Card article actualité #}
-            <div class="card-articles-actu-blog">
-                <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
-                <h4>Titre</h4>
-                <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed </p>
-                <button>Lire</button>
-            </div>
-            {# End card article actualité #}
-
-            {# Card article actualité #}
-            <div class="card-articles-actu-blog">
-                <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
-                <h4>Titre</h4>
-                <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed </p>
-                <button>Lire</button>
-            </div>
-            {# End card article actualité #}
 
         </div>
 
         <div class="main-article-actu-blog margin-body">
-            <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
-            <h3>Comment utiliser les  imprimantes 3D du Créativ'Lab ?</h3>
-            <p class="legend">Article publié le 20.03.22 par ...</p>
+            <img src="{{asset("upload/posts/images/")}}{{ singlePostActu.picture }}" alt="image d'illustration de l'article">
+            <h3>{{ singlePostActu.title }}</h3>
+            <p class="legend">Article publié le {{ singlePostActu.createdAt | date("d m Y") }}</p>
             <p class="text">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur</p>
+                {{ singlePostActu.description }}</p>
             <button>Lire la suite</button>
         </div>
 

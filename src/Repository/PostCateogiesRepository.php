@@ -45,6 +45,16 @@ class PostCateogiesRepository extends ServiceEntityRepository
         }
     }
 
+    public function findWithName($name): PostCateogies
+    {
+        return $this->createQueryBuilder('p')
+            ->andWhere('p.name = :name')
+            ->setMaxResults(1)
+            ->setParameter('name', $name)
+            ->getQuery()
+            ->getSingleResult();
+    }
+
     // /**
     //  * @return PostCateogies[] Returns an array of PostCateogies objects
     //  */

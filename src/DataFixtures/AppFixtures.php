@@ -66,9 +66,9 @@ class AppFixtures extends Fixture
 
         $user = $manager->getRepository(User::class);
         $user = $user->findAll();
-        $categories = ['Imprimante 3D', 'Technologie', 'Espace', 'Innovation', 'Revolution'];
+        $categories = ['Tutoriels', 'Projets', 'Actualite Techno'];
 
-        for ($i = 0; $i <= 4; $i++) {
+        for ($i = 0; $i <= 2; $i++) {
             $postCategory = new PostCateogies();
             $postCategory->setName($categories[$i]);
             $manager->persist($postCategory);
@@ -86,6 +86,7 @@ class AppFixtures extends Fixture
             $post->setPicture('postBasePicture.png');
             $post->setCreatedAt(new \DateTime());
             $post->setCategory($postCategory[array_rand($postCategory)]);
+            $post->setIsOnline(false);
 
             $manager->persist($post);
         }

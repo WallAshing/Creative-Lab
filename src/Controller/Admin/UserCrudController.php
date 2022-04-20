@@ -27,6 +27,7 @@ class UserCrudController extends AbstractCrudController
             ChoiceField::new('roles')->allowMultipleChoices()->setChoices([
                     'Administrator' => 'ROLE_ADMIN',
                     'User' => 'ROLE_USER',
+                    'Editeur' => 'ROLE_EDITEUR'
                 ]
             ),
             TextField::new('password')->setDisabled()->hideOnIndex(),

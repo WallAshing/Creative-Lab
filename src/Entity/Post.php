@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\PostRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 #[ORM\Entity(repositoryClass: PostRepository::class)]
 class Post
@@ -29,9 +30,11 @@ class Post
     private $Utilisateur;
 
     #[ORM\Column(type: 'date')]
+    #[Gedmo\Timestampable(on: 'create')]
     private $createdAt;
 
     #[ORM\Column(type: 'date', nullable: true)]
+    #[Gedmo\Timestampable(on: 'update')]
     private $updatedAt;
 
     #[ORM\Column(type: 'text', nullable: true)]
@@ -40,6 +43,9 @@ class Post
     #[ORM\ManyToOne(targetEntity: PostCateogies::class, inversedBy: 'posts')]
     #[ORM\JoinColumn(nullable: false)]
     private $category;
+
+    #[ORM\Column(type: 'boolean')]
+    private $isOnline;
 
     public function getId(): ?int
     {
@@ -150,6 +156,18 @@ class Post
     public function setCategory(?PostCateogies $category): self
     {
         $this->category = $category;
+
+        return $this;
+    }
+
+    public function getIsOnline(): ?bool
+    {
+        return $this->isOnline;
+    }
+
+    public function setIsOnline(bool $isOnline): self
+    {
+        $this->isOnline = $isOnline;
 
         return $this;
     }

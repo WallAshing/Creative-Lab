@@ -34,7 +34,8 @@ class RegistrationFormType extends AbstractType
                     new Image([
                         'maxSize' => '5M',
                     ]),
-                ]
+                ],
+                'required' => false
             ])
             ->add('agreeTerms', CheckboxType::class, [
                 'mapped' => false,

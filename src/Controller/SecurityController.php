@@ -12,6 +12,9 @@ class SecurityController extends AbstractController
     #[Route(path: '/login', name: 'app_login')]
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
+        if ($this->getUser()) {
+            return $this->redirectToRoute('app_app');
+        }
         $error = $authenticationUtils->getLastAuthenticationError();
         $lastUsername = $authenticationUtils->getLastUsername();
 
@@ -19,7 +22,6 @@ class SecurityController extends AbstractController
             'error' => $error,
             'last_username' => $lastUsername,
             'translation_domain' => 'admin',
-            'page_title' => 'E-Commerce Website',
             'csrf_token_intention' => 'authenticate',
             'target_path' => $this->generateUrl('admin'),
             'username_label' => 'Email',

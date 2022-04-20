@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\MateriauxRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 #[ORM\Entity(repositoryClass: MateriauxRepository::class)]
 class Materiaux
@@ -23,9 +24,11 @@ class Materiaux
     private $quantity;
 
     #[ORM\Column(type: 'date')]
+    #[Gedmo\Timestampable(on: 'create')]
     private $createdAt;
 
     #[ORM\Column(type: 'date')]
+    #[Gedmo\Timestampable(on: 'update')]
     private $updatedAt;
 
     public function getId(): ?int
