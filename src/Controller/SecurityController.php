@@ -22,7 +22,6 @@ class SecurityController extends AbstractController
             'error' => $error,
             'last_username' => $lastUsername,
             'translation_domain' => 'admin',
-            'page_title' => 'E-Commerce Website',
             'csrf_token_intention' => 'authenticate',
             'target_path' => $this->generateUrl('admin'),
             'username_label' => 'Email',

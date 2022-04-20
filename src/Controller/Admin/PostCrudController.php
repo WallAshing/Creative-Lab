@@ -6,6 +6,7 @@ use App\Entity\Post;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Filters;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
@@ -59,7 +60,8 @@ class PostCrudController extends AbstractCrudController
             DateField::new('createdAt')->setDisabled()->hideOnForm(),
             DateField::new('updatedAt')->setDisabled()->hideOnForm(),
             TextField::new('code')->setSortable(false),
-            AssociationField::new('category')->setSortable(false)
+            AssociationField::new('category')->setSortable(false),
+            BooleanField::new('isOnline')
         ];
     }
 
