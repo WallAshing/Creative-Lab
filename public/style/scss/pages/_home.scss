@@ -2,6 +2,9 @@
 
 .section-home-news{
     padding: 200px 100px;
+    .card-articles-tutos{
+        margin-bottom: 20px;
+    }
     h2{
         padding-bottom: 50px;
     }
@@ -18,6 +21,9 @@
     flex-direction: column;
     background: $color-white;
     padding: 200px 100px;
+    h2{
+        text-align: center;
+    }
     img{
         width: 80%;
         margin: 20px 0;
@@ -41,8 +47,12 @@
     .container-article-materiel-impression{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        @media screen and (max-width : 800px) {
+            grid-template-columns: 1fr;
+        }
         img{
             width: 100%;
+            margin: 20px 0;
         }
         div{
             padding: 0 10%;
