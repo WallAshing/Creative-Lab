@@ -19,3 +19,25 @@ header{
         }
     }
 }
+
+.dropdown-connexion{
+    position: relative;
+    &:hover{
+        .dropdown-content{
+            display: flex;
+        }
+    }
+    .dropdown-content{
+        display: none;
+        position: absolute;
+        transform: translate(-50%, -30%);
+        left: 50%;
+        background: $color-white;
+        padding: 20px 30px;
+        border-radius: $radius-medium;
+        box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+        a{
+            margin: 0 15px;
+        }
+    }
+}
