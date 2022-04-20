@@ -18,11 +18,13 @@
             margin: 30px 0;
             width: 80%;
         }
-        .background-shape{
-            background: red;
-            width: 60%;
-            height: 200px;
-            display: inline;
+        @media screen and (max-width : 800px) {
+            width: 90%;
+            margin: 0 5%;
+            padding: 80px 20px;
+            .text{
+                width: 100%;
+            }
         }
     }
     .background-hero-home{
@@ -51,6 +53,9 @@
         }
         .img-parrallax{
             z-index: 1;
+            @media screen and (max-width : 1200px) {
+                display: none;
+            }
         }
     }
 }

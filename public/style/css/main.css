@@ -35,6 +35,11 @@ body {
   margin: 0 auto;
   padding: 0 100px;
 }
+@media screen and (max-width: 800px) {
+  .margin-body {
+    padding: 0 50px;
+  }
+}
 
 .container-section {
   width: 100vw;
@@ -305,6 +310,9 @@ button:hover {
 .section-home-news {
   padding: 200px 100px;
 }
+.section-home-news .card-articles-tutos {
+  margin-bottom: 20px;
+}
 .section-home-news h2 {
   padding-bottom: 50px;
 }
@@ -320,6 +328,9 @@ button:hover {
   flex-direction: column;
   background: #fff;
   padding: 200px 100px;
+}
+.section-materiel-informatique-home h2 {
+  text-align: center;
 }
 .section-materiel-informatique-home img {
   width: 80%;
@@ -345,8 +356,14 @@ button:hover {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
+@media screen and (max-width: 800px) {
+  .section-materiel-impression-home .container-article-materiel-impression {
+    grid-template-columns: 1fr;
+  }
+}
 .section-materiel-impression-home .container-article-materiel-impression img {
   width: 100%;
+  margin: 20px 0;
 }
 .section-materiel-impression-home .container-article-materiel-impression div {
   padding: 0 10%;
@@ -420,11 +437,15 @@ header nav .connexion button a {
   margin: 30px 0;
   width: 80%;
 }
-.hero-home .card-hero-home .background-shape {
-  background: red;
-  width: 60%;
-  height: 200px;
-  display: inline;
+@media screen and (max-width: 800px) {
+  .hero-home .card-hero-home {
+    width: 90%;
+    margin: 0 5%;
+    padding: 80px 20px;
+  }
+  .hero-home .card-hero-home .text {
+    width: 100%;
+  }
 }
 .hero-home .background-hero-home {
   position: absolute;
@@ -453,6 +474,11 @@ header nav .connexion button a {
 }
 .hero-home .background-hero-home .img-parrallax {
   z-index: 1;
+}
+@media screen and (max-width: 1200px) {
+  .hero-home .background-hero-home .img-parrallax {
+    display: none;
+  }
 }
 
 .hero {
