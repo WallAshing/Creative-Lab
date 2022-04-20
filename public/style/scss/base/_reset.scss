@@ -14,5 +14,9 @@ body{
 .margin-body{
     max-width: 1900px;
     margin: 0 auto;
-    padding: 0 50px;
+    padding: 0 100px;
+}
+.container-section{
+    width: 100vw;
+    background: $color-white;
 }

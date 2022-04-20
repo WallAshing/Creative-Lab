@@ -1,7 +1,9 @@
 
-
-footer{
+.container-footer{
+    width: 100vw;
     background: $color-grey;
+}
+footer{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
