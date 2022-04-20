@@ -1,0 +1,46 @@
+// **** ARTICLE **** //
+// ================= //
+
+.article-description{
+    padding: 50px 100px;
+    @media screen and (max-width : 800px) {
+        padding: 50px 50px;
+    }
+    a{
+        svg{
+            width: 40px;
+        }
+    }
+    h2{
+        padding: 50px 0;
+    }
+}
+
+.article-image{
+    padding: 100px 100px;
+    @media screen and (max-width : 800px) {
+        padding: 100px 50px;
+    }
+    width: 100%;
+    img{
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        margin-bottom: 50px;
+    }
+}
+
+.container-more-tutos{
+    .more-tutos{
+        h2{
+            padding-top: 100px;
+        }
+    }
+    .background-container-more-tutos{
+        position: absolute;
+        background: $color-white;
+        z-index: -1;
+        height: calc(50% + 100px);
+        width: 100%;
+    }
+}
