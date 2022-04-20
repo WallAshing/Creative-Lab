@@ -1,0 +1,57 @@
+
+
+.section-home-news{
+    padding: 200px 100px;
+    h2{
+        padding-bottom: 50px;
+    }
+    button{
+        display: block;
+        margin: 50px auto
+    }
+}
+
+.section-materiel-informatique-home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: $color-white;
+    padding: 200px 100px;
+    img{
+        width: 80%;
+        margin: 20px 0;
+    }
+    .slider-img{
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+.section-materiel-impression-home{
+    padding-top: 200px;
+    h2{
+        padding-bottom: 50px;
+    }
+    .container-article-materiel-impression{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        img{
+            width: 100%;
+        }
+        div{
+            padding: 0 10%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            p{
+                margin: 20px 0;
+            }
+        }
+    }
+}

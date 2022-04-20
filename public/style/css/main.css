@@ -33,7 +33,12 @@ body {
 .margin-body {
   max-width: 1900px;
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0 100px;
+}
+
+.container-section {
+  width: 100vw;
+  background: #fff;
 }
 
 h1 {
@@ -88,6 +93,7 @@ button {
   background: linear-gradient(90deg, #288E93, #60CF82);
   padding: 13px 20px;
   border: none;
+  width: fit-content;
   cursor: pointer;
   color: #fff;
   border-radius: 999px;
@@ -110,12 +116,15 @@ button:hover {
   padding: 170px 0 250px 0;
 }
 
-.container-articles-tutos {
+.container-articles {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: -80px;
   flex-wrap: wrap;
+}
+
+.container-articles_tutos {
+  margin-top: -80px;
 }
 
 .container-articles-blog {
@@ -293,6 +302,62 @@ button:hover {
   margin: 0 20px;
 }
 
+.section-home-news {
+  padding: 200px 100px;
+}
+.section-home-news h2 {
+  padding-bottom: 50px;
+}
+.section-home-news button {
+  display: block;
+  margin: 50px auto;
+}
+
+.section-materiel-informatique-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #fff;
+  padding: 200px 100px;
+}
+.section-materiel-informatique-home img {
+  width: 80%;
+  margin: 20px 0;
+}
+.section-materiel-informatique-home .slider-img {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+.section-materiel-informatique-home .slider-img img {
+  width: 100%;
+}
+
+.section-materiel-impression-home {
+  padding-top: 200px;
+}
+.section-materiel-impression-home h2 {
+  padding-bottom: 50px;
+}
+.section-materiel-impression-home .container-article-materiel-impression {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.section-materiel-impression-home .container-article-materiel-impression img {
+  width: 100%;
+}
+.section-materiel-impression-home .container-article-materiel-impression div {
+  padding: 0 10%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.section-materiel-impression-home .container-article-materiel-impression div p {
+  margin: 20px 0;
+}
+
 header {
   width: 100vw;
   background: #fff;
@@ -310,6 +375,60 @@ header nav ul {
 }
 header nav ul li {
   margin: 0 15px;
+}
+
+.hero-home {
+  width: 100%;
+  height: calc(100vh - 110px);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.hero-home .card-hero-home {
+  background: #fff;
+  border-radius: 16px;
+  width: 70%;
+  margin-left: 10%;
+  padding: 80px 50px;
+  position: relative;
+}
+.hero-home .card-hero-home .text {
+  margin: 30px 0;
+  width: 80%;
+}
+.hero-home .card-hero-home .background-shape {
+  background: red;
+  width: 60%;
+  height: 200px;
+  display: inline;
+}
+.hero-home .background-hero-home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.hero-home .background-hero-home .background-hero-green {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #68D880;
+  width: 30%;
+  height: 100%;
+  z-index: -1;
+}
+.hero-home .background-hero-home img {
+  top: 0;
+  right: 0;
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.hero-home .background-hero-home .img-parrallax {
+  z-index: 1;
 }
 
 .hero {
@@ -341,14 +460,17 @@ header nav ul li {
 }
 .nav ul {
   display: flex;
-  align-items: center;
 }
-.nav ul li:not(:nth-child(1)) {
-  margin: 0 20px;
+.nav ul li {
+  margin-right: 20px;
+}
+
+.container-footer {
+  width: 100vw;
+  background: #484849;
 }
 
 footer {
-  background: #484849;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;

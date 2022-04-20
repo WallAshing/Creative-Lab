@@ -1,0 +1,119 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home page{% endblock %}
+
+{% block body %}
+
+<section class="hero-home">
+
+    <div class="background-hero-home">
+        <div class="background-hero-green"></div>
+        <img src="{{asset("images/blog/bg-hero-home.jpg")}}" alt="">
+        <img class="img-parrallax" src="{{asset("images/blog/bg-hero-home-machine.png")}}" alt="">
+    </div>
+
+    <div class="card-hero-home">
+        <h1>Le Creativ'Lab</h1>
+        <div class="background-shape"></div>
+        <p class="text">Entre créativité, prototypage et technique. Le Créativ’Lab est un atelier de prototypage physique et numérique. Le but de ce labo technologique est de faire émerger des talents créatifs multidisciplinaires en favorisant les projets inter axes et innovants des écoles du Pôle Léonard de Vinci. La technologie est au coeur de nos sociétés et nous voulons proposer la meilleure expérience possible pour les étudiants.</p>
+        <button>Bouton</button>
+    </div>
+
+</section>
+
+<section class="section-home-news margin-body">
+
+    <h2>Les news technologiques : </h2>
+
+    <div class="container-articles margin-body">
+
+        <div class="card-articles-tutos">
+            <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
+            <h4>Article :</h4>
+            <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
+        </div>
+
+        <div class="card-articles-tutos">
+            <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
+            <h4>Article :</h4>
+            <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
+        </div>
+
+        <div class="card-articles-tutos">
+            <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
+            <h4>Article :</h4>
+            <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
+        </div>
+
+    </div>
+
+    <button>Lire d'autres articles</button>
+
+</section>
+
+<section class="container-section">
+
+    <div class="section-materiel-informatique-home margin-body">
+
+        <h2>Comment utiliser le matériel informatique :</h2>
+
+        <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
+
+        <div class="slider-img">
+            <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
+            <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
+            <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
+            <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section-materiel-impression-home margin-body">
+
+    <h2>Notre matériel d’impression et de prototypage :</h2>
+
+    <div class="container-article-materiel-impression">
+        <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
+        <div>
+            <h4>Nos imprimantes</h4>
+            <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea</p>
+            <button>Lire d'autres articles</button>
+        </div>
+    </div>
+
+</section>
+
+
+<section class="section-home-news margin-body">
+
+    <h2>Les évènements à venir :</h2>
+
+    <div class="container-articles margin-body">
+
+        <div class="card-articles-tutos">
+            <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
+            <h4>Journée porte ouverte 13/05/2022 :</h4>
+            <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
+        </div>
+
+        <div class="card-articles-tutos">
+            <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
+            <h4>Journée porte ouverte 13/05/2022 :</h4>
+            <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
+        </div>
+
+        <div class="card-articles-tutos">
+            <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
+            <h4>Journée porte ouverte 13/05/2022 :</h4>
+            <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
+        </div>
+
+    </div>
+
+    <button>Lire d'autres articles</button>
+
+</section>
+
+{% endblock %}
