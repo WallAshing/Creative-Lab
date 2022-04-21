@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block body %}
+
+<section class="container-section">
+
+    <div class="section-contact margin-body">
+
+        <h2>Les journées portes-ouvertes de l’IIM :</h2>
+        <p class="subtitle">Nulla quis enim bibendum, accumsan velit vel, dapibus nibh.</p>
+
+        <div class="card-contact">
+
+            {# Card Contact #}
+            <div class="card-articles-materiel">
+                <div class="container-card-description-materiel">
+                    <div class="is-avaible is-avaible_disponible"><p class="text">24/03/22</p></div>
+                    <div class="description-card-materiel">
+                        <p class="text">Au cours de la journée nous vous proposons de venir voir nos équipements et les projets de nos étudiants.</p>
+                    </div>
+                    <button>Je m’inscris</button>
+                </div>
+            </div>
+
+            <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section-form-contact margin-body">
+
+    <h2>Rendez-vous avec le Créativ’Lab :</h2>
+    <p class="subtitle">Remplissez ce formulaire pour convenir d’un rendez-vous avec des membres du Créativ’Lab pour plus d’information sur celui-ci.</p>
+
+    <div class="container-form-contact">
+
+        <h4>Demande de rendez-vous :</h4>
+
+        <form action='' method=''>
+        
+            <label class="text" for='mail'>Adresse Mail</label>
+            <input type='text' id='mail' name='mail' placeholder='gregory.chaux@gmail.com' />
+
+            <label class="text" for='password'>Mot de passe</label>
+            <input type='text' id='password' name='password' placeholder='••••' />
+
+            <label class="text" for='date'>Date</label>
+            <input type='text' id='date' name='date' placeholder='00/00/00' />  
+
+            <input type='submit' value="J'envoie"/>
+        </form>
+        
+    </div>
+
+</section>
+
+{% endblock %}
