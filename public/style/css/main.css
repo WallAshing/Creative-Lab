@@ -395,6 +395,23 @@ button a {
   margin-bottom: 150px;
 }
 
+.section-main-article-materiel {
+  margin: 150px 0 200px 0;
+}
+.section-main-article-materiel .card-articles-materiel .container-card-description-materiel {
+  width: 40%;
+  position: absolute;
+  left: 10%;
+  transform: translate(0, -50%);
+}
+@media screen and (max-width: 1000px) {
+  .section-main-article-materiel .card-articles-materiel .container-card-description-materiel {
+    transform: translate(-50%, -50%);
+    left: 50%;
+    width: 80%;
+  }
+}
+
 .card-articles-materiel .container-card-description-materiel {
   width: 80%;
   position: absolute;
