@@ -486,15 +486,15 @@ button a, input[type=submit] a {
   margin-top: 30px;
 }
 
-.section-form-contact {
+.section-form-contact, .section-imprimante {
   padding: 200px 100px;
 }
 @media screen and (max-width: 800px) {
-  .section-form-contact {
+  .section-form-contact, .section-imprimante {
     padding: 200px 50px;
   }
 }
-.section-form-contact .container-form-contact {
+.section-form-contact .container-form-contact, .section-form-contact .container-form-imprimante, .section-imprimante .container-form-contact, .section-imprimante .container-form-imprimante {
   background: #fff;
   width: fit-content;
   border-radius: 16px;
@@ -502,33 +502,36 @@ button a, input[type=submit] a {
   margin-top: 40px;
 }
 @media screen and (max-width: 1000px) {
-  .section-form-contact .container-form-contact {
+  .section-form-contact .container-form-contact, .section-form-contact .container-form-imprimante, .section-imprimante .container-form-contact, .section-imprimante .container-form-imprimante {
     width: 100%;
   }
 }
-.section-form-contact .container-form-contact h4 {
+.section-form-contact .container-form-contact h4, .section-form-contact .container-form-imprimante h4, .section-imprimante .container-form-contact h4, .section-imprimante .container-form-imprimante h4 {
   padding-bottom: 40px;
 }
-.section-form-contact .container-form-contact form {
+.section-form-contact .container-form-contact form, .section-form-contact .container-form-imprimante form, .section-imprimante .container-form-contact form, .section-imprimante .container-form-imprimante form {
   display: grid;
   grid-template-columns: 200px 1fr;
   grid-gap: 10px;
 }
 @media screen and (max-width: 800px) {
-  .section-form-contact .container-form-contact form {
+  .section-form-contact .container-form-contact form, .section-form-contact .container-form-imprimante form, .section-imprimante .container-form-contact form, .section-imprimante .container-form-imprimante form {
     grid-template-columns: 1fr;
   }
 }
-.section-form-contact .container-form-contact form input[type=text] {
+.section-form-contact .container-form-contact form input[type=text], .section-form-contact .container-form-contact form input[type=password], .section-form-contact .container-form-imprimante form input[type=text], .section-form-contact .container-form-imprimante form input[type=password], .section-imprimante .container-form-contact form input[type=text], .section-imprimante .container-form-contact form input[type=password], .section-imprimante .container-form-imprimante form input[type=text], .section-imprimante .container-form-imprimante form input[type=password] {
   padding: 10px 20px;
   width: 300px;
   border-radius: 999px;
   background: #c8c8c82e;
   border: 1px solid #a8a8a82e;
 }
-.section-form-contact .container-form-contact form input[type=submit] {
+.section-form-contact .container-form-contact form input[type=submit], .section-form-contact .container-form-imprimante form input[type=submit], .section-imprimante .container-form-contact form input[type=submit], .section-imprimante .container-form-imprimante form input[type=submit] {
   width: fit-content;
   margin-top: 30px;
+}
+.section-form-contact .container-form-imprimante form, .section-imprimante .container-form-imprimante form {
+  grid-template-columns: 1fr;
 }
 
 .article-description {

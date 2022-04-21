@@ -34,12 +34,12 @@
     }
 }
 
-.section-form-contact{
+.section-form-contact, .section-imprimante{
     padding: 200px 100px;
     @media screen and (max-width : 800px) {
         padding: 200px 50px;
     }
-    .container-form-contact{
+    .container-form-contact, .container-form-imprimante{
         background: $color-white;
         width: fit-content;
         border-radius: $radius-medium;
@@ -58,7 +58,7 @@
             @media screen and (max-width : 800px) {
                 grid-template-columns: 1fr;
             }
-            input[type="text"]{
+            input[type="text"], input[type="password"]{
                 padding: 10px 20px;
                 width: 300px;
                 border-radius: 999px;
@@ -69,6 +69,11 @@
                 width: fit-content;
                 margin-top: 30px;
             }
+        }
+    }
+    .container-form-imprimante{
+        form{
+            grid-template-columns: 1fr;
         }
     }
 }
