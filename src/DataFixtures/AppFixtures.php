@@ -2,6 +2,7 @@
 
 namespace App\DataFixtures;
 
+use App\Entity\Event;
 use App\Entity\Imprimante;
 use App\Entity\Materiaux;
 use App\Entity\Post;
@@ -127,6 +128,18 @@ class AppFixtures extends Fixture
             $imprimante->setWorking(false);
             $imprimante->setCreatedAt(new \DateTime());
             $manager->persist($imprimante);
+        }
+        $manager->flush();
+
+        for ($i = 0; $i < 10; $i++) {
+            $datetime = new \DateTime();
+            $datetime->modify("+ $i day");
+            $event = new Event();
+            $event->setName("JPO");
+            $event->setDate($datetime);
+            $event->setPicture('postBasePicture.png');
+            $event->setDescription("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod");
+            $manager->persist($event);
         }
         $manager->flush();
 

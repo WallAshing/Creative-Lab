@@ -26,23 +26,15 @@
 
     <div class="container-articles margin-body">
 
-        <div class="card-articles-tutos">
-            <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
-            <h4>Article :</h4>
-            <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
-        </div>
-
-        <div class="card-articles-tutos">
-            <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
-            <h4>Article :</h4>
-            <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
-        </div>
-
-        <div class="card-articles-tutos">
-            <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
-            <h4>Article :</h4>
-            <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
-        </div>
+        {% for postActualite in postsActualite %}
+            {% if postActualite.isOnline %}
+                <div class="card-articles-tutos">
+                    <img src="{{asset("upload/posts/images/")}}{{ postActualite.picture }}" alt="image d'illustration de l'article">
+                    <h4>{{ postActualite.title | length > 20 ? postActualite.title | slice(0, 20) ~ '...' : postActualite.title }}</h4>
+                    <p class="text">{{ postActualite.description | length > 80 ? postActualite.description | slice(0, 77) ~ '...' : postActualite.description }}</p>
+                </div>
+            {% endif %}
+        {% endfor %}
 
     </div>
 
@@ -77,8 +69,8 @@
         <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
         <div>
             <h4>Nos imprimantes</h4>
-            <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea</p>
-            <button>Lire d'autres articles</button>
+            <p class="text">Pour nos imprimantes nous utilisons les celebres : {% for imprimante in allImprimantes %} {{ imprimante ~ ', ' }} {% endfor %}</p>
+            <button>Acceder a toutes nos imprimante</button>
         </div>
     </div>
 
@@ -91,23 +83,14 @@
 
     <div class="container-articles margin-body">
 
-        <div class="card-articles-tutos">
-            <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
-            <h4>Journée porte ouverte 13/05/2022 :</h4>
-            <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
-        </div>
+        {% for event in events %}
+            <div class="card-articles-tutos">
+                <img src="{{asset("upload/posts/images/")}}{{ event.picture }}" alt="image d'illustration de l'article">
+                <h4>{{ event.name }} le : {{ event.date | date("d/m/Y") }}</h4>
+                <p class="text">{{ event.description }}</p>
+            </div>
+        {% endfor %}
 
-        <div class="card-articles-tutos">
-            <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
-            <h4>Journée porte ouverte 13/05/2022 :</h4>
-            <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
-        </div>
-
-        <div class="card-articles-tutos">
-            <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
-            <h4>Journée porte ouverte 13/05/2022 :</h4>
-            <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
-        </div>
 
     </div>
 

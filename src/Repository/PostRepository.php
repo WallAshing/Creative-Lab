@@ -74,12 +74,12 @@ class PostRepository extends ServiceEntityRepository
     }
     */
 
-    public function sortByDate($category, $order): array
+    public function sortByDate($category, $order, $maxResult): array
     {
         return $this->createQueryBuilder('p')
             ->where('p.category = :category')
             ->orderBy('p.createdAt', $order)
-            ->setMaxResults(2)
+            ->setMaxResults($maxResult)
             ->setParameter('category', $category)
             ->getQuery()
             ->getResult();
