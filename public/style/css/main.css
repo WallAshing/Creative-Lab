@@ -3,7 +3,7 @@ h3, h2, h1 {
   font-weight: 900;
 }
 
-header nav .connexion button a, button, .subtitle, h4 {
+header nav .connexion button a, .card-articles-materiel .container-card-description-materiel .is-avaible .text, button a, button, .subtitle, h4 {
   font-family: "Neuzeit Grotesk", sans-serif;
   font-weight: 700;
 }
@@ -102,9 +102,14 @@ button {
   cursor: pointer;
   color: #fff;
   border-radius: 999px;
+  font-size: 13px;
 }
 button:hover {
   background: linear-gradient(90deg, #60CF82, #288E93);
+}
+button a {
+  font-size: 13px;
+  color: #fff;
 }
 
 .sections-blog {
@@ -184,15 +189,15 @@ button:hover {
   grid-column: 2/3;
 }
 
-.container-articles-projets-blog, .container-articles-actu-blog {
+.container-articles-projets-blog, .container-articles-actu-blog, .container-article-materiel {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 60px;
   background: #F0F4F0;
 }
-@media screen and (max-width: 800px) {
-  .container-articles-projets-blog, .container-articles-actu-blog {
+@media screen and (max-width: 1000px) {
+  .container-articles-projets-blog, .container-articles-actu-blog, .container-article-materiel {
     grid-template-columns: 1fr;
     grid-gap: 0;
   }
@@ -243,16 +248,16 @@ button:hover {
   margin: 20px 0;
 }
 
-.card-articles-projets-blog {
+.card-articles-projets-blog, .card-articles-materiel {
   width: 100%;
   position: relative;
 }
-.card-articles-projets-blog img {
+.card-articles-projets-blog img, .card-articles-materiel img {
   object-fit: cover;
   width: 100%;
   height: 500px;
 }
-.card-articles-projets-blog .description-card-projets-blog {
+.card-articles-projets-blog .description-card-projets-blog, .card-articles-materiel .description-card-projets-blog {
   padding: 30px;
   width: 80%;
   position: absolute;
@@ -262,7 +267,7 @@ button:hover {
   background: #fff;
   border-radius: 16px;
 }
-.card-articles-projets-blog .description-card-projets-blog p {
+.card-articles-projets-blog .description-card-projets-blog p, .card-articles-materiel .description-card-projets-blog p {
   margin: 30px 0;
 }
 
@@ -373,6 +378,60 @@ button:hover {
 }
 .section-materiel-impression-home .container-article-materiel-impression div p {
   margin: 20px 0;
+}
+
+.section-article-materiel {
+  padding: 100px 100px;
+}
+@media screen and (max-width: 800px) {
+  .section-article-materiel {
+    padding: 100px 50px;
+  }
+}
+.section-article-materiel h2 {
+  margin: 40px 0;
+}
+.section-article-materiel .card-articles-materiel {
+  margin-bottom: 150px;
+}
+
+.card-articles-materiel .container-card-description-materiel {
+  width: 80%;
+  position: absolute;
+  z-index: 11;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card-articles-materiel .container-card-description-materiel .description-card-materiel {
+  z-index: 1;
+  width: 100%;
+  padding: 30px;
+  background: #fff;
+  border-radius: 16px;
+  height: fit-content;
+}
+.card-articles-materiel .container-card-description-materiel .description-card-materiel p {
+  margin: 30px 0;
+}
+.card-articles-materiel .container-card-description-materiel .is-avaible {
+  transform: translateY(-60%);
+  z-index: -1;
+  border-radius: 16px 16px 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 15px 30px 40px;
+}
+.card-articles-materiel .container-card-description-materiel .is-avaible .text {
+  color: #fff;
+  font-size: 1.2rem;
+}
+.card-articles-materiel .container-card-description-materiel .is-avaible_disponible {
+  background: #68D880;
+}
+.card-articles-materiel .container-card-description-materiel .is-avaible_indisponible {
+  background: #484849;
 }
 
 .article-description {
