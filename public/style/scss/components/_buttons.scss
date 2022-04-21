@@ -10,7 +10,13 @@ button{
     color: $color-white;
     border-radius: 999px;
     @extend %font-NeuzeitGrotesk-bold;
+    font-size: 13px;
     &:hover{
         background: $color-linear-invert;
+    }
+    a{
+        font-size: 13px;
+        color: $color-white;
+        @extend %font-NeuzeitGrotesk-bold;
     }
 }

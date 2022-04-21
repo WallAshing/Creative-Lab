@@ -76,13 +76,13 @@
 }
 
 
-.container-articles-projets-blog, .container-articles-actu-blog{
+.container-articles-projets-blog, .container-articles-actu-blog, .container-article-materiel{
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 60px;
     background: $color-light-green;
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 1000px) {
         grid-template-columns: 1fr;
         grid-gap: 0;
     }
@@ -134,7 +134,7 @@
 
 // Cards
 
-.card-articles-projets-blog{
+.card-articles-projets-blog, .card-articles-materiel{
     width: 100%;
     position: relative;
     img{
