@@ -525,12 +525,20 @@ button a, input[type=submit] a {
     grid-template-columns: 1fr;
   }
 }
-.section-form-contact .container-form-contact form input[type=text], .section-form-contact .container-form-contact form input[type=password], .section-form-contact .container-form-imprimante form input[type=text], .section-form-contact .container-form-imprimante form input[type=password], .section-imprimante .container-form-contact form input[type=text], .section-imprimante .container-form-contact form input[type=password], .section-imprimante .container-form-imprimante form input[type=text], .section-imprimante .container-form-imprimante form input[type=password] {
+.section-form-contact .container-form-contact form input[type=text], .section-form-contact .container-form-contact form input[type=password], .section-form-contact .container-form-contact form textarea, .section-form-contact .container-form-imprimante form input[type=text], .section-form-contact .container-form-imprimante form input[type=password], .section-form-contact .container-form-imprimante form textarea, .section-imprimante .container-form-contact form input[type=text], .section-imprimante .container-form-contact form input[type=password], .section-imprimante .container-form-contact form textarea, .section-imprimante .container-form-imprimante form input[type=text], .section-imprimante .container-form-imprimante form input[type=password], .section-imprimante .container-form-imprimante form textarea {
   padding: 10px 20px;
   width: 300px;
+  max-width: 300px;
   border-radius: 999px;
   background: #c8c8c82e;
   border: 1px solid #a8a8a82e;
+  outline: none;
+}
+.section-form-contact .container-form-contact form textarea, .section-form-contact .container-form-imprimante form textarea, .section-imprimante .container-form-contact form textarea, .section-imprimante .container-form-imprimante form textarea {
+  outline: none;
+  resize: none;
+  height: 100px;
+  border-radius: 24px !important;
 }
 .section-form-contact .container-form-contact form input[type=submit], .section-form-contact .container-form-imprimante form input[type=submit], .section-imprimante .container-form-contact form input[type=submit], .section-imprimante .container-form-imprimante form input[type=submit] {
   width: fit-content;
