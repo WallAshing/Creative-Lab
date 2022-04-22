@@ -36,7 +36,7 @@
                         <img src="{{ asset('upload/posts/images/') }}{{ postTuto.picture }}" alt="image d'illustration de l'article">
                         <h4>{{ postTuto.title | length > 20 ? postTuto.title | slice(0, 20) ~ '...' : postTuto.title }}</h4>
                         <p class="text">{{ postTuto.description | length > 80 ? postTuto.description | slice(0, 77) ~ '...' : postTuto.description }}</p>
-                        <button>Lire</button>
+                        <button><a href="{{ path('app_blog_show', {'id': postTuto.id}) }}">Lire</a></button>
                     </div>
                 {% endif %}
             {% endfor %}
@@ -55,6 +55,7 @@
                             <h4>Description de la vidéo</h4>
                             <p class="text">
                                 {{ soonerTuto.description | length > 430 ? soonerTuto.description | slice(0, 430) ~ '...' : soonerTuto.description }}</p>
+                            <button><a href="{{ path('app_blog_show', {'id': soonerTuto.id}) }}">Lire</a></button>
                         </div>
                     </div>
                 {% endif %}

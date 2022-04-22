@@ -36,6 +36,7 @@ class PostCrudController extends AbstractCrudController
             IdField::new('id')->setDisabled()->hideOnForm(),
             TextField::new('title')->setSortable(false),
             TextEditorField::new('description')->setSortable(false),
+            TextEditorField::new('secondDescription')->setSortable(false),
             ImageField::new('picture')
                 ->setUploadDir('public/upload/posts/images')
                 ->setBasePath('upload/posts/images')

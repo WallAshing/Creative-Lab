@@ -47,6 +47,9 @@ class Post
     #[ORM\Column(type: 'boolean')]
     private $isOnline;
 
+    #[ORM\Column(type: 'text', nullable: true)]
+    private $secondDescription;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -168,6 +171,18 @@ class Post
     public function setIsOnline(bool $isOnline): self
     {
         $this->isOnline = $isOnline;
+
+        return $this;
+    }
+
+    public function getSecondDescription(): ?string
+    {
+        return $this->secondDescription;
+    }
+
+    public function setSecondDescription(?string $secondDescription): self
+    {
+        $this->secondDescription = $secondDescription;
 
         return $this;
     }
