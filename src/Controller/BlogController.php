@@ -42,4 +42,15 @@ class BlogController extends AbstractController
             'singlePostActu' => $repository->getOneByDate($categoryActualite, "DESC")
         ]);
     }
+
+    #[Route('/blog/{id}', name: 'app_blog_show')]
+    public function show(PostRepository $postRepository, $id): Response
+    {
+        $post = $postRepository->findOneBy(['id' => $id]);
+        $postLike = $postRepository->getSimilar($post->getCategory(), $post->getId());
+        return $this->render('article/index.html.twig', [
+            'post' => $post,
+            'postLikes' => $postLike
+        ]);
+    }
 }

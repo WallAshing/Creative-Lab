@@ -104,4 +104,15 @@ class PostRepository extends ServiceEntityRepository
             ->getQuery()
             ->getSingleResult();
     }
+
+    public function getSimilar($category, $id): array
+    {
+        return $this->createQueryBuilder('p')
+            ->where('p.id != :id')
+            ->andWhere('p.category = :category')
+            ->setParameter('id', $id)
+            ->setParameter('category', $category)
+            ->getQuery()
+            ->getResult();
+    }
 }

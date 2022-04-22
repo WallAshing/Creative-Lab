@@ -84,6 +84,7 @@ class AppFixtures extends Fixture
             $post->setUtilisateur($user[array_rand($user)]);
             $post->setTitle('iPhone 14 Pro et 14 Pro Max : on en sait plus sur les dimensions et le module photo qui dépasse');
             $post->setDescription("Des schémas des iPhone 14 Pro et iPhone 14 Pro Max dévoilent les dimensions supposées des futurs smartphones d'Apple. On en apprend également un peu plus sur la protubérance du bloc photo.");
+            $post->setSecondDescription("Lorem ipsum dolor sit amet, consectetur adipiscing elit. In auctor accumsan ante et egestas. Duis hendrerit venenatis ligula, molestie tempus urna venenatis vitae. Mauris ac luctus risus. Donec ultricies hendrerit mauris. Sed vestibulum in turpis commodo dictum. Donec tristique ornare felis, sit amet dictum nisi sollicitudin ac. Fusce ornare imperdiet nibh, a viverra est egestas at. Suspendisse consequat eget metus vitae feugiat. Nam commodo risus a malesuada sagittis. Mauris volutpat est purus, vitae hendrerit lorem fermentum id. Suspendisse sed tortor ultricies, eleifend nisl at, molestie arcu.");
             $post->setPicture('postBasePicture.png');
             $post->setCreatedAt(new \DateTime());
             $post->setCategory($postCategory[array_rand($postCategory)]);
