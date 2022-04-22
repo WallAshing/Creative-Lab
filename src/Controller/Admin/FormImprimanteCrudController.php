@@ -39,7 +39,7 @@ class FormImprimanteCrudController extends AbstractCrudController
             ImageField::new('stlFile')
                 ->setUploadDir('public/upload/stlFile')
                 ->setBasePath('upload/stlFile')
-                ->setUploadedFileNamePattern('[randomhash].[extension]')
+                ->setUploadedFileNamePattern('[randomhash].stl')
                 ->setFormTypeOptions([
                     'attr' => [
                         'accept' => '.stl'
