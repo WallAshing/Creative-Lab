@@ -10,16 +10,35 @@
 
         <h4>Réservez une imprimante</h4>
 
-        <form action='' method=''>
+{#        <form action='' method=''>#}
 
-            <label class="text" for='password'>Motif de la réservation</label>
-            <input type='text' id='password' name='password' placeholder='Votre message' />
+{#            <label class="text" for='password'>Motif de la réservation</label>#}
+{#            <input type='text' id='password' name='password' placeholder='Votre message' />#}
 
-            <label class="text" for='date'>Fichier</label>
-            <input type='text' id='date' name='date' placeholder='Déposez votre fichier ici' />  
+{#            <label class="text" for='date'>Fichier</label>#}
+{#            <input type='text' id='date' name='date' placeholder='Déposez votre fichier ici' />#}
 
-            <input type='submit' value="Je m'incris"/>
-        </form>
+{#            <input type='submit' value="Je m'incris"/>#}
+{#        </form>#}
+
+        {{ form_start(imprimateForm) }}
+            {{ form_label(imprimateForm.impressionName, 'Nom de votre impression', {
+                'label_attr': {'class': 'text'}
+            }) }}
+            {{ form_widget(imprimateForm.impressionName) }}
+
+            {{ form_label(imprimateForm.description, 'Motif de la réservation', {
+                'label_attr': {'class': 'text'}
+            }) }}
+            {{ form_widget(imprimateForm.description) }}
+
+            {{ form_label(imprimateForm.stlFile, 'Fichier', {
+                'label_attr': {'class': 'text'}
+            }) }}
+            {{ form_widget(imprimateForm.stlFile) }}
+
+        {{ form_end(imprimateForm) }}
+
         
     </div>
 
