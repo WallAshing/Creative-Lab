@@ -6,12 +6,13 @@ header{
     background: $color-white;
     nav{
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         height: 110px;
         ul{
             display: flex;
             justify-content: center;
+            align-items: center;
             flex-direction: raw;
             li{
                 margin: 0 15px;

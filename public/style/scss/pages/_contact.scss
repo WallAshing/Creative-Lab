@@ -1,0 +1,79 @@
+// **** CONTACT **** //
+// ================= //
+
+.section-contact{
+    h2{
+        padding-top: 100px;
+    }
+    .card-contact{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 100px 0 200px 0;
+        img{
+            width: 60%;
+            @media screen and (max-width : 1000px) {
+                display: none;
+            }
+        }
+        .container-card-description-materiel{
+            position: initial;
+            min-width: 300px;
+            width: calc(100% + 100px);
+            transform: translate(0, 0);
+            @media screen and (max-width : 1000px) {
+                width: 100%;
+            }
+            .description-card-materiel{
+                background: $color-light-green;
+            }
+        }
+        button{
+            margin-top: 30px;
+        }
+    }
+}
+
+.section-form-contact, .section-imprimante{
+    padding: 200px 100px;
+    @media screen and (max-width : 800px) {
+        padding: 200px 50px;
+    }
+    .container-form-contact, .container-form-imprimante{
+        background: $color-white;
+        width: fit-content;
+        border-radius: $radius-medium;
+        padding: 50px 100px 50px 50px;
+        margin-top: 40px;
+        @media screen and (max-width : 1000px) {
+            width: 100%;
+        }
+        h4{
+            padding-bottom: 40px;
+        }
+        form{
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-gap: 10px;
+            @media screen and (max-width : 800px) {
+                grid-template-columns: 1fr;
+            }
+            input[type="text"], input[type="password"]{
+                padding: 10px 20px;
+                width: 300px;
+                border-radius: 999px;
+                background: #c8c8c82e;
+                border: 1px solid #a8a8a82e;
+            }
+            input[type="submit"]{
+                width: fit-content;
+                margin-top: 30px;
+            }
+        }
+    }
+    .container-form-imprimante{
+        form{
+            grid-template-columns: 1fr;
+        }
+    }
+}

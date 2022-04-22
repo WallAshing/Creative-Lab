@@ -14,6 +14,23 @@
     }
 }
 
+.section-main-article-materiel{
+    margin: 150px 0 200px 0;
+    .card-articles-materiel{
+        .container-card-description-materiel{
+            width: 40%;
+            position: absolute;
+            left: 10%;
+            transform: translate(0, -50%);
+            @media screen and (max-width : 1000px) {
+                transform: translate(-50%, -50%);
+                left: 50%;
+                width: 80%;
+            }
+        }
+    }
+}
+
 .card-articles-materiel{
     .container-card-description-materiel{
         width: 80%;

@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Imprimante{% endblock %}
+
+{% block body %}
+
+<section class="section-imprimante margin-body">
+
+    <div class="container-form-imprimante">
+
+        <h4>Réservez une imprimante</h4>
+
+        <form action='' method=''>
+
+            <label class="text" for='password'>Motif de la réservation</label>
+            <input type='text' id='password' name='password' placeholder='Votre message' />
+
+            <label class="text" for='date'>Fichier</label>
+            <input type='text' id='date' name='date' placeholder='Déposez votre fichier ici' />  
+
+            <input type='submit' value="Je m'incris"/>
+        </form>
+        
+    </div>
+
+</section>
+
+{% endblock %}

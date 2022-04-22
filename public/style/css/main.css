@@ -3,7 +3,7 @@ h3, h2, h1 {
   font-weight: 900;
 }
 
-header nav .connexion button a, .card-articles-materiel .container-card-description-materiel .is-avaible .text, button a, button, .subtitle, h4 {
+header nav .connexion button a, .card-articles-materiel .container-card-description-materiel .is-avaible .text, button a, input[type=submit] a, button, input[type=submit], .subtitle, h4 {
   font-family: "Neuzeit Grotesk", sans-serif;
   font-weight: 700;
 }
@@ -94,7 +94,7 @@ li {
   list-style-type: none;
 }
 
-button {
+button, input[type=submit] {
   background: linear-gradient(90deg, #288E93, #60CF82);
   padding: 13px 20px;
   border: none;
@@ -104,10 +104,10 @@ button {
   border-radius: 999px;
   font-size: 13px;
 }
-button:hover {
+button:hover, input[type=submit]:hover {
   background: linear-gradient(90deg, #60CF82, #288E93);
 }
-button a {
+button a, input[type=submit] a {
   font-size: 13px;
   color: #fff;
 }
@@ -395,6 +395,23 @@ button a {
   margin-bottom: 150px;
 }
 
+.section-main-article-materiel {
+  margin: 150px 0 200px 0;
+}
+.section-main-article-materiel .card-articles-materiel .container-card-description-materiel {
+  width: 40%;
+  position: absolute;
+  left: 10%;
+  transform: translate(0, -50%);
+}
+@media screen and (max-width: 1000px) {
+  .section-main-article-materiel .card-articles-materiel .container-card-description-materiel {
+    transform: translate(-50%, -50%);
+    left: 50%;
+    width: 80%;
+  }
+}
+
 .card-articles-materiel .container-card-description-materiel {
   width: 80%;
   position: absolute;
@@ -432,6 +449,89 @@ button a {
 }
 .card-articles-materiel .container-card-description-materiel .is-avaible_indisponible {
   background: #484849;
+}
+
+.section-contact h2 {
+  padding-top: 100px;
+}
+.section-contact .card-contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 0 200px 0;
+}
+.section-contact .card-contact img {
+  width: 60%;
+}
+@media screen and (max-width: 1000px) {
+  .section-contact .card-contact img {
+    display: none;
+  }
+}
+.section-contact .card-contact .container-card-description-materiel {
+  position: initial;
+  min-width: 300px;
+  width: calc(100% + 100px);
+  transform: translate(0, 0);
+}
+@media screen and (max-width: 1000px) {
+  .section-contact .card-contact .container-card-description-materiel {
+    width: 100%;
+  }
+}
+.section-contact .card-contact .container-card-description-materiel .description-card-materiel {
+  background: #F0F4F0;
+}
+.section-contact .card-contact button {
+  margin-top: 30px;
+}
+
+.section-form-contact, .section-imprimante {
+  padding: 200px 100px;
+}
+@media screen and (max-width: 800px) {
+  .section-form-contact, .section-imprimante {
+    padding: 200px 50px;
+  }
+}
+.section-form-contact .container-form-contact, .section-form-contact .container-form-imprimante, .section-imprimante .container-form-contact, .section-imprimante .container-form-imprimante {
+  background: #fff;
+  width: fit-content;
+  border-radius: 16px;
+  padding: 50px 100px 50px 50px;
+  margin-top: 40px;
+}
+@media screen and (max-width: 1000px) {
+  .section-form-contact .container-form-contact, .section-form-contact .container-form-imprimante, .section-imprimante .container-form-contact, .section-imprimante .container-form-imprimante {
+    width: 100%;
+  }
+}
+.section-form-contact .container-form-contact h4, .section-form-contact .container-form-imprimante h4, .section-imprimante .container-form-contact h4, .section-imprimante .container-form-imprimante h4 {
+  padding-bottom: 40px;
+}
+.section-form-contact .container-form-contact form, .section-form-contact .container-form-imprimante form, .section-imprimante .container-form-contact form, .section-imprimante .container-form-imprimante form {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-gap: 10px;
+}
+@media screen and (max-width: 800px) {
+  .section-form-contact .container-form-contact form, .section-form-contact .container-form-imprimante form, .section-imprimante .container-form-contact form, .section-imprimante .container-form-imprimante form {
+    grid-template-columns: 1fr;
+  }
+}
+.section-form-contact .container-form-contact form input[type=text], .section-form-contact .container-form-contact form input[type=password], .section-form-contact .container-form-imprimante form input[type=text], .section-form-contact .container-form-imprimante form input[type=password], .section-imprimante .container-form-contact form input[type=text], .section-imprimante .container-form-contact form input[type=password], .section-imprimante .container-form-imprimante form input[type=text], .section-imprimante .container-form-imprimante form input[type=password] {
+  padding: 10px 20px;
+  width: 300px;
+  border-radius: 999px;
+  background: #c8c8c82e;
+  border: 1px solid #a8a8a82e;
+}
+.section-form-contact .container-form-contact form input[type=submit], .section-form-contact .container-form-imprimante form input[type=submit], .section-imprimante .container-form-contact form input[type=submit], .section-imprimante .container-form-imprimante form input[type=submit] {
+  width: fit-content;
+  margin-top: 30px;
+}
+.section-form-contact .container-form-imprimante form, .section-imprimante .container-form-imprimante form {
+  grid-template-columns: 1fr;
 }
 
 .article-description {
@@ -482,13 +582,14 @@ header {
 }
 header nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   height: 110px;
 }
 header nav ul {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: raw;
 }
 header nav ul li {
@@ -642,6 +743,7 @@ header nav .connexion button a {
 }
 
 footer {
+  position: relative;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -675,7 +777,12 @@ footer .footer-right .footer-nav-social-media ul {
   display: flex;
 }
 footer .footer-right .footer-nav-social-media ul li:not(:last-child) {
-  padding: 0 40px;
+  padding-right: 50px;
+}
+footer .container-copyright {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
 }
 
 /*# sourceMappingURL=main.css.map */
