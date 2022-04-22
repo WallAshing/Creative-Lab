@@ -237,6 +237,12 @@ button a, input[type=submit] a {
 
 .main-article-actu-blog {
   width: 100%;
+  padding: 0px 100px 200px 100px;
+}
+@media screen and (max-width: 1000px) {
+  .main-article-actu-blog {
+    padding: 0px 50px 200px 50px;
+  }
 }
 .main-article-actu-blog img {
   width: 100%;
