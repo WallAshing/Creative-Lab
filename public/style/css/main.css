@@ -582,13 +582,14 @@ header {
 }
 header nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   height: 110px;
 }
 header nav ul {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: raw;
 }
 header nav ul li {
@@ -742,6 +743,7 @@ header nav .connexion button a {
 }
 
 footer {
+  position: relative;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -775,7 +777,12 @@ footer .footer-right .footer-nav-social-media ul {
   display: flex;
 }
 footer .footer-right .footer-nav-social-media ul li:not(:last-child) {
-  padding: 0 40px;
+  padding-right: 50px;
+}
+footer .container-copyright {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -4,6 +4,7 @@
     background: $color-grey;
 }
 footer{
+    position: relative;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -35,9 +36,14 @@ footer{
             ul{
                 display: flex;
                 li:not(:last-child){
-                    padding: 0 40px;
+                    padding-right: 50px;
                 }
             }
         }
+    }
+    .container-copyright{
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
     }
 }
