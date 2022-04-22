@@ -85,11 +85,12 @@ class PostRepository extends ServiceEntityRepository
             ->getResult();
     }
 
-    public function findAllByCategory($category): array
+    public function findAllByCategory($category, $max): array
     {
         return $this->createQueryBuilder('p')
             ->where('p.category = :category')
             ->setParameter('category', $category)
+            ->setMaxResults($max)
             ->getQuery()
             ->getResult();
     }

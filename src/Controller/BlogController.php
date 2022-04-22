@@ -30,9 +30,9 @@ class BlogController extends AbstractController
             }
         }
 
-        $postTuto = array_slice($postTuto, 0, 4);
-        $postProjets = array_slice($postTuto, 0, 4);
-        $postActu = array_slice($postTuto, 0, 4);
+        $postTuto = array_slice($postTuto, 0, 3);
+        $postProjets = array_slice($postTuto, 0, 3);
+        $postActu = array_slice($postTuto, 0, 3);
 
 
 
@@ -41,8 +41,8 @@ class BlogController extends AbstractController
             'soonerTutos' => $repository->sortByDate($categoryTuto, "DESC", 2),
             'postsProjetsDESC' => $repository->sortByDate($categoryProjet, "DESC", 2),
             'postsProjetsASC' => $repository->sortByDate($categoryProjet, "ASC", 2),
-            'allPostProjets' => $repository->findAllByCategory($categoryProjet),
-            'postsActu' => $repository->findAllByCategory($categoryActualite),
+            'allPostProjets' => $repository->findAllByCategory($categoryProjet, 50),
+            'postsActu' => $repository->findAllByCategory($categoryActualite, 4),
             'singlePostActu' => $repository->getOneByDate($categoryActualite, "DESC")
         ]);
     }
