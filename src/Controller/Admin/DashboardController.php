@@ -2,7 +2,13 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Contact;
+use App\Entity\Event;
+use App\Entity\FormImprimante;
+use App\Entity\Imprimante;
+use App\Entity\Materiaux;
 use App\Entity\Post;
+use App\Entity\PostCateogies;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -24,7 +30,8 @@ class DashboardController extends AbstractDashboardController
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle('Bap2');
+            ->setTitle('Dashboard Creative Lab')
+            ->setFaviconPath('upload/logo/Groupe.png');
     }
 
     public function configureMenuItems(): iterable
@@ -37,6 +44,30 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::section('Post');
         yield MenuItem::subMenu('Action', 'fas fa-folder')->setSubItems([
             MenuItem::linkToCrud("Voir les posts", 'fas fa-eye', Post::class)->setAction(Crud::PAGE_INDEX)
+        ]);
+        yield MenuItem::section('Contact');
+        yield MenuItem::subMenu('Action', 'fas fa-folder')->setSubItems([
+            MenuItem::linkToCrud("Voir les demandes de contact", 'fas fa-eye', Contact::class)->setAction(Crud::PAGE_INDEX)
+        ]);
+        yield MenuItem::section('Event');
+        yield MenuItem::subMenu('Action', 'fas fa-folder')->setSubItems([
+            MenuItem::linkToCrud("Voir les events", 'fas fa-eye', Event::class)->setAction(Crud::PAGE_INDEX)
+        ]);
+        yield MenuItem::section("Demande d'imprimante");
+        yield MenuItem::subMenu('Action', 'fas fa-folder')->setSubItems([
+            MenuItem::linkToCrud("Voir les demandes d'imprimante", 'fas fa-eye', FormImprimante::class)->setAction(Crud::PAGE_INDEX)
+        ]);
+        yield MenuItem::section('Imprimante');
+        yield MenuItem::subMenu('Action', 'fas fa-folder')->setSubItems([
+            MenuItem::linkToCrud("Voir les imprimantes", 'fas fa-eye', Imprimante::class)->setAction(Crud::PAGE_INDEX)
+        ]);
+        yield MenuItem::section('Materiaux');
+        yield MenuItem::subMenu('Action', 'fas fa-folder')->setSubItems([
+            MenuItem::linkToCrud("Voir les materiaux", 'fas fa-eye', Materiaux::class)->setAction(Crud::PAGE_INDEX)
+        ]);
+        yield MenuItem::section('Categories de post');
+        yield MenuItem::subMenu('Action', 'fas fa-folder')->setSubItems([
+            MenuItem::linkToCrud("Voir les categories de post", 'fas fa-eye', PostCateogies::class)->setAction(Crud::PAGE_INDEX)
         ]);
     }
 }
