@@ -45,6 +45,18 @@ class MateriauxRepository extends ServiceEntityRepository
         }
     }
 
+    public function getMax(): array
+    {
+        return $this->createQueryBuilder('m')
+            ->select('m.name')
+            ->select('m.description')
+            ->select('max(m.quantity)')
+            ->setMaxResults(1)
+            ->getQuery()
+            ->getResult();
+    }
+
+
     // /**
     //  * @return Materiaux[] Returns an array of Materiaux objects
     //  */

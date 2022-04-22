@@ -2,7 +2,11 @@
 
 namespace App\Repository;
 
+use App\Entity\Article;
+use App\Entity\Comments;
 use App\Entity\FormImprimante;
+use App\Entity\Imprimante;
+use App\Entity\User;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\ORM\OptimisticLockException;
 use Doctrine\ORM\ORMException;
@@ -43,6 +47,15 @@ class FormImprimanteRepository extends ServiceEntityRepository
         if ($flush) {
             $this->_em->flush();
         }
+    }
+
+    public function new(User $user = null, Imprimante $imprimante) : FormImprimante
+    {
+        $formImprimante = new FormImprimante();
+        $formImprimante->setUtilisateur($user);
+        $formImprimante->setImprimante($imprimante);
+
+        return $formImprimante;
     }
 
     // /**

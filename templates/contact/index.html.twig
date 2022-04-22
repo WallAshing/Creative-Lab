@@ -41,19 +41,38 @@
 
         <h4>Demande de rendez-vous :</h4>
 
-        <form action='' method=''>
-        
-            <label class="text" for='mail'>Adresse Mail</label>
-            <input type='text' id='mail' name='mail' placeholder='gregory.chaux@gmail.com' />
+{#        <form action='' method=''>#}
+{#        #}
+{#            <label class="text" for='mail'>Adresse Mail</label>#}
+{#            <input type='text' id='mail' name='mail' placeholder='gregory.chaux@gmail.com' />#}
 
-            <label class="text" for='password'>Mot de passe</label>
-            <input type='password' id='password' name='password' placeholder='•••••••' />
+{#            <label class="text" for='password'>Mot de passe</label>#}
+{#            <input type='password' id='password' name='password' placeholder='•••••••' />#}
 
-            <label class="text" for='date'>Date</label>
-            <input type='text' id='date' name='date' placeholder='00/00/00' />  
+{#            <label class="text" for='date'>Date</label>#}
+{#            <input type='text' id='date' name='date' placeholder='00/00/00' />  #}
 
-            <input type='submit' value="J'envoie"/>
-        </form>
+{#            <input type='submit' value="J'envoie"/>#}
+{#        </form>#}
+        {{ form_start(contactForm) }}
+        {{ form_label(contactForm.phoneNumber, 'Votre numero de telephone', {
+            'label_attr': {'class': 'text'}
+        }) }}
+        {{ form_widget(contactForm.phoneNumber) }}
+
+        {{ form_label(contactForm.personalEmail, 'Votre email', {
+            'label_attr': {'class': 'text'}
+        }) }}
+        {{ form_widget(contactForm.personalEmail) }}
+
+        {{ form_label(contactForm.discordTag, 'Votre tag discord', {
+            'label_attr': {'class': 'text'}
+        }) }}
+        {{ form_widget(contactForm.discordTag) }}
+        {{ form_widget(contactForm.Jeproposemonidee, {'label': "J'envoie ma demande de contact"}) }}
+
+        {{ form_end(contactForm) }}
+
 
     </div>
 
