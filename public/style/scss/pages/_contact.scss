@@ -35,10 +35,11 @@
 }
 
 .section-form-contact, .section-imprimante{
-    padding: 200px 100px;
-    @media screen and (max-width : 800px) {
-        padding: 200px 50px;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    height: calc(100vh - 110px);
     .container-form-contact, .container-form-imprimante{
         background: $color-white;
         width: fit-content;

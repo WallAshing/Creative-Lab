@@ -493,12 +493,11 @@ button a, input[type=submit] a {
 }
 
 .section-form-contact, .section-imprimante {
-  padding: 200px 100px;
-}
-@media screen and (max-width: 800px) {
-  .section-form-contact, .section-imprimante {
-    padding: 200px 50px;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  height: calc(100vh - 110px);
 }
 .section-form-contact .container-form-contact, .section-form-contact .container-form-imprimante, .section-imprimante .container-form-contact, .section-imprimante .container-form-imprimante {
   background: #fff;
