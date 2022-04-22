@@ -41,10 +41,10 @@
                                 </g>
                             </svg>
                         </a></li>
-                        <li><a href="#">Imprimantes</a></li>
+                        <li><a href="{{ path('app_imprimante') }}">Imprimantes</a></li>
+                        <li><a href="{{ path('app_materiel') }}">Materiel</a></li>
                         <li><a href="{{ path('app_blog') }}">Blog</a></li>
-                        <li><a href="#">Agenda</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="{{ path('app_contact') }}">Contact</a></li>
                     </ul>
                     {% if app.user %}
 {#                        <a href="{{ path('app_logout') }}"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">#}
