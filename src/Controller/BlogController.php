@@ -30,6 +30,10 @@ class BlogController extends AbstractController
             }
         }
 
+        $postTuto = array_slice($postTuto, 0, 4);
+        $postProjets = array_slice($postTuto, 0, 4);
+        $postActu = array_slice($postTuto, 0, 4);
+
 
 
         return $this->render('blog/index.html.twig', [
