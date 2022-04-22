@@ -50,7 +50,7 @@ class PostCrudController extends AbstractCrudController
             ImageField::new('stlFile')
                 ->setUploadDir('public/upload/posts/stlFile')
                 ->setBasePath('upload/posts/stlFile')
-                ->setUploadedFileNamePattern('[randomhash].[extension]')
+                ->setUploadedFileNamePattern('[randomhash].stl')
                 ->setFormTypeOptions([
                     'attr' => [
                         'accept' => '.stl'
