@@ -34,12 +34,23 @@ class BlogController extends AbstractController
 
         return $this->render('blog/index.html.twig', [
             'postsTuto' => $postTuto,
-            'soonerTutos' => $repository->sortByDate($categoryTuto, "DESC"),
-            'postsProjetsDESC' => $repository->sortByDate($categoryProjet, "DESC"),
-            'postsProjetsASC' => $repository->sortByDate($categoryProjet, "ASC"),
+            'soonerTutos' => $repository->sortByDate($categoryTuto, "DESC", 2),
+            'postsProjetsDESC' => $repository->sortByDate($categoryProjet, "DESC", 2),
+            'postsProjetsASC' => $repository->sortByDate($categoryProjet, "ASC", 2),
             'allPostProjets' => $repository->findAllByCategory($categoryProjet),
             'postsActu' => $repository->findAllByCategory($categoryActualite),
             'singlePostActu' => $repository->getOneByDate($categoryActualite, "DESC")
+        ]);
+    }
+
+    #[Route('/blog/{id}', name: 'app_blog_show')]
+    public function show(PostRepository $postRepository, $id): Response
+    {
+        $post = $postRepository->findOneBy(['id' => $id]);
+        $postLike = $postRepository->getSimilar($post->getCategory(), $post->getId());
+        return $this->render('article/index.html.twig', [
+            'post' => $post,
+            'postLikes' => $postLike
         ]);
     }
 }

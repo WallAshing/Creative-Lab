@@ -74,12 +74,12 @@ class PostRepository extends ServiceEntityRepository
     }
     */
 
-    public function sortByDate($category, $order): array
+    public function sortByDate($category, $order, $maxResult): array
     {
         return $this->createQueryBuilder('p')
             ->where('p.category = :category')
             ->orderBy('p.createdAt', $order)
-            ->setMaxResults(2)
+            ->setMaxResults($maxResult)
             ->setParameter('category', $category)
             ->getQuery()
             ->getResult();
@@ -103,5 +103,16 @@ class PostRepository extends ServiceEntityRepository
             ->setParameter('category', $category)
             ->getQuery()
             ->getSingleResult();
+    }
+
+    public function getSimilar($category, $id): array
+    {
+        return $this->createQueryBuilder('p')
+            ->where('p.id != :id')
+            ->andWhere('p.category = :category')
+            ->setParameter('id', $id)
+            ->setParameter('category', $category)
+            ->getQuery()
+            ->getResult();
     }
 }
