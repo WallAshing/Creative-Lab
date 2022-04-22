@@ -3,6 +3,9 @@
 namespace App\Repository;
 
 use App\Entity\Contact;
+use App\Entity\FormImprimante;
+use App\Entity\Imprimante;
+use App\Entity\User;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\ORM\OptimisticLockException;
 use Doctrine\ORM\ORMException;
@@ -43,6 +46,14 @@ class ContactRepository extends ServiceEntityRepository
         if ($flush) {
             $this->_em->flush();
         }
+    }
+
+    public function new(User $user = null) : Contact
+    {
+        $contact = new Contact();
+        $contact->setUtilisateur($user);
+
+        return $contact;
     }
 
     // /**

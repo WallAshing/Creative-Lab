@@ -17,56 +17,61 @@
     <div class="container-article-materiel">
 
         {# Card article materiel #}
-        <div class="card-articles-materiel">
-            <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
-            <div class="container-card-description-materiel">
-                <div class="is-avaible is-avaible_disponible"><p class="text">Disponible</p></div>
-                <div class="description-card-materiel">
-                    <h4>Imprimantes 3D Ultimaker 2+</h4>
-                    <p class="text">Du matériel professionnel pour permettre à nos étudiants de développer leur créativité.</p>
-                    <button>Lire</button>
+        {% for materiau1 in materiaux1 %}
+            {% if materiau1.quantity > 0 %}
+                <div class="card-articles-materiel">
+                    <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
+                    <div class="container-card-description-materiel">
+                        <div class="is-avaible is-avaible_disponible"><p class="text">Disponible</p></div>
+                        <div class="description-card-materiel">
+                            <h4>{{ materiau1.name }}</h4>
+                            <p class="text">{{ materiau1.description }}</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
+            {% else %}
+                <div class="card-articles-materiel">
+                    <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
+                    <div class="container-card-description-materiel">
+                        <div class="is-avaible is-avaible_indisponible"><p class="text">Indisponible</p></div>
+                        <div class="description-card-materiel">
+                            <h4>{{ materiau1.name }}</h4>
+                            <p class="text">{{ materiau1.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
 
-        {# Card article materiel #}
-        <div class="card-articles-materiel">
-            <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
-            <div class="container-card-description-materiel">
-                <div class="is-avaible is-avaible_indisponible"><p class="text">Indisponible</p></div>
-                <div class="description-card-materiel">
-                    <h4>Imprimantes 3D Ultimaker 2+</h4>
-                    <p class="text">Du matériel professionnel pour permettre à nos étudiants de développer leur créativité.</p>
-                    <button>Lire</button>
-                </div>
-            </div>
-        </div>
 
-        {# Card article materiel #}
-        <div class="card-articles-materiel">
-            <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
-            <div class="container-card-description-materiel">
-                <div class="is-avaible is-avaible_indisponible"><p class="text">Indisponible</p></div>
-                <div class="description-card-materiel">
-                    <h4>Imprimantes 3D Ultimaker 2+</h4>
-                    <p class="text">Du matériel professionnel pour permettre à nos étudiants de développer leur créativité.</p>
-                    <button>Lire</button>
-                </div>
-            </div>
-        </div>
+{#        #}{# Card article materiel #}
 
-        {# Card article materiel #}
-        <div class="card-articles-materiel">
-            <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
-            <div class="container-card-description-materiel">
-                <div class="is-avaible is-avaible_disponible"><p class="text">Disponible</p></div>
-                <div class="description-card-materiel">
-                    <h4>Imprimantes 3D Ultimaker 2+</h4>
-                    <p class="text">Du matériel professionnel pour permettre à nos étudiants de développer leur créativité.</p>
-                    <button>Lire</button>
-                </div>
-            </div>
-        </div>
+
+{#        #}{# Card article materiel #}
+{#        <div class="card-articles-materiel">#}
+{#            <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">#}
+{#            <div class="container-card-description-materiel">#}
+{#                <div class="is-avaible is-avaible_indisponible"><p class="text">Indisponible</p></div>#}
+{#                <div class="description-card-materiel">#}
+{#                    <h4>Imprimantes 3D Ultimaker 2+</h4>#}
+{#                    <p class="text">Du matériel professionnel pour permettre à nos étudiants de développer leur créativité.</p>#}
+{#                    <button>Lire</button>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+
+{#        #}{# Card article materiel #}
+{#        <div class="card-articles-materiel">#}
+{#            <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">#}
+{#            <div class="container-card-description-materiel">#}
+{#                <div class="is-avaible is-avaible_disponible"><p class="text">Disponible</p></div>#}
+{#                <div class="description-card-materiel">#}
+{#                    <h4>Imprimantes 3D Ultimaker 2+</h4>#}
+{#                    <p class="text">Du matériel professionnel pour permettre à nos étudiants de développer leur créativité.</p>#}
+{#                    <button>Lire</button>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
 
     </div>
 
@@ -80,9 +85,8 @@
         <div class="container-card-description-materiel">
             <div class="is-avaible is-avaible_disponible"><p class="text">Disponible</p></div>
             <div class="description-card-materiel">
-                <h4>Imprimantes 3D Ultimaker 2+</h4>
-                <p class="text">Du matériel professionnel pour permettre à nos étudiants de développer leur créativité.</p>
-                <button><a href="#">Lire</a></button>
+                <h4>{{ getMax.name }}</h4>
+                <p class="text">{{ getMax.description }}</p>
             </div>
         </div>
     </div>
@@ -93,31 +97,31 @@
 
     <div class="container-article-materiel">
 
-        {# Card article materiel #}
-        <div class="card-articles-materiel">
-            <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
-            <div class="container-card-description-materiel">
-                <div class="is-avaible is-avaible_disponible"><p class="text">Disponible</p></div>
-                <div class="description-card-materiel">
-                    <h4>Imprimantes 3D Ultimaker 2+</h4>
-                    <p class="text">Du matériel professionnel pour permettre à nos étudiants de développer leur créativité.</p>
-                    <button><a href="#">Lire</a></button>
+        {% for materiau2 in materiaux2 %}
+            {% if materiau2.quantity > 0 %}
+                <div class="card-articles-materiel">
+                    <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
+                    <div class="container-card-description-materiel">
+                        <div class="is-avaible is-avaible_disponible"><p class="text">Disponible</p></div>
+                        <div class="description-card-materiel">
+                            <h4>{{ materiau2.name }}</h4>
+                            <p class="text">{{ materiau2.description }}</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-
-        {# Card article materiel #}
-        <div class="card-articles-materiel">
-            <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
-            <div class="container-card-description-materiel">
-                <div class="is-avaible is-avaible_indisponible"><p class="text">Indisponible</p></div>
-                <div class="description-card-materiel">
-                    <h4>Imprimantes 3D Ultimaker 2+</h4>
-                    <p class="text">Du matériel professionnel pour permettre à nos étudiants de développer leur créativité.</p>
-                    <button>Lire</button>
+            {% else %}
+                <div class="card-articles-materiel">
+                    <img src="{{asset("images/blog/bg-hero.jpeg")}}" alt="image d'illustration de l'article">
+                    <div class="container-card-description-materiel">
+                        <div class="is-avaible is-avaible_indisponible"><p class="text">Indisponible</p></div>
+                        <div class="description-card-materiel">
+                            <h4>{{ materiau2.name }}</h4>
+                            <p class="text">{{ materiau2.description }}</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
+            {% endif %}
+        {% endfor %}
 
     </div>
 

@@ -45,6 +45,23 @@ class ImprimanteRepository extends ServiceEntityRepository
         }
     }
 
+    public function findDisponible(): array
+    {
+        return $this->createQueryBuilder('i')
+            ->andWhere('i.working = 0')
+            ->getQuery()
+            ->getResult();
+    }
+
+    public function getCountImprimanteDispo(): int
+    {
+        return $this->createQueryBuilder('i')
+            ->select('count(i.id)')
+            ->andWhere("i.working = 0")
+            ->getQuery()
+            ->getSingleScalarResult();
+    }
+
     // /**
     //  * @return Imprimante[] Returns an array of Imprimante objects
     //  */
